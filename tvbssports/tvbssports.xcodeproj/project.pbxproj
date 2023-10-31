@@ -76,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55249F2D2AF0D6B800FBC05F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55AC07762AF0D0AF00D64221 /* AppDelegate.swift */,
+				55AC07782AF0D0AF00D64221 /* SceneDelegate.swift */,
+				55AC077A2AF0D0AF00D64221 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		55AC076A2AF0D0AF00D64221 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +109,7 @@
 		55AC07752AF0D0AF00D64221 /* tvbssports */ = {
 			isa = PBXGroup;
 			children = (
-				55AC07762AF0D0AF00D64221 /* AppDelegate.swift */,
-				55AC07782AF0D0AF00D64221 /* SceneDelegate.swift */,
-				55AC077A2AF0D0AF00D64221 /* ViewController.swift */,
+				55249F2D2AF0D6B800FBC05F /* Controller */,
 				55AC077C2AF0D0AF00D64221 /* Main.storyboard */,
 				55AC077F2AF0D0AF00D64221 /* Assets.xcassets */,
 				55AC07812AF0D0AF00D64221 /* LaunchScreen.storyboard */,
