@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sContentCell" rowHeight="158" id="KGk-i7-Jjw" customClass="SContentCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="158"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sy9-6L-RgN" userLabel="ShadowView" customClass="ShadowView" customModule="videoCollection" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="301" height="138"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpA-uL-8Xj" userLabel="ContainView">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="138"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全球經濟、國際政治、異國文化、多元主題、深度報導" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYR-DZ-gDB">
+                                        <rect key="frame" x="10" y="85" width="281" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TVBS 報導" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-FA-iJ6">
+                                        <rect key="frame" x="10" y="49" width="281" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TVBS 國際新聞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-Ut-rpq">
+                                        <rect key="frame" x="10" y="10" width="281" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PNQ-FA-iJ6" firstAttribute="leading" secondItem="VpA-uL-8Xj" secondAttribute="leading" constant="10" id="0BN-nz-zlQ"/>
+                                    <constraint firstItem="lYR-DZ-gDB" firstAttribute="leading" secondItem="VpA-uL-8Xj" secondAttribute="leading" constant="10" id="2fA-BK-lEU"/>
+                                    <constraint firstAttribute="trailing" secondItem="wb5-Ut-rpq" secondAttribute="trailing" constant="10" id="NW1-fj-Vtz"/>
+                                    <constraint firstItem="lYR-DZ-gDB" firstAttribute="top" secondItem="PNQ-FA-iJ6" secondAttribute="bottom" constant="20" id="WvI-Fl-ir4"/>
+                                    <constraint firstAttribute="trailing" secondItem="PNQ-FA-iJ6" secondAttribute="trailing" constant="10" id="apA-dz-v8r"/>
+                                    <constraint firstItem="PNQ-FA-iJ6" firstAttribute="top" secondItem="wb5-Ut-rpq" secondAttribute="bottom" constant="10" id="hdq-B5-A92"/>
+                                    <constraint firstItem="wb5-Ut-rpq" firstAttribute="top" secondItem="VpA-uL-8Xj" secondAttribute="top" constant="10" id="i9v-ac-Ta4"/>
+                                    <constraint firstAttribute="trailing" secondItem="lYR-DZ-gDB" secondAttribute="trailing" constant="10" id="mGd-jU-mzQ"/>
+                                    <constraint firstItem="wb5-Ut-rpq" firstAttribute="leading" secondItem="VpA-uL-8Xj" secondAttribute="leading" constant="10" id="tOZ-Wu-RAw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VpA-uL-8Xj" secondAttribute="trailing" id="ICy-yR-cip"/>
+                            <constraint firstAttribute="bottom" secondItem="VpA-uL-8Xj" secondAttribute="bottom" id="JY3-UG-aw7"/>
+                            <constraint firstItem="VpA-uL-8Xj" firstAttribute="top" secondItem="sy9-6L-RgN" secondAttribute="top" id="U5W-bm-kcX"/>
+                            <constraint firstItem="VpA-uL-8Xj" firstAttribute="leading" secondItem="sy9-6L-RgN" secondAttribute="leading" id="lG2-4g-53r"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sy9-6L-RgN" secondAttribute="bottom" constant="10" id="Cvc-Mr-Kbr"/>
+                    <constraint firstAttribute="trailing" secondItem="sy9-6L-RgN" secondAttribute="trailing" constant="10" id="Oyu-Q0-FyV"/>
+                    <constraint firstItem="sy9-6L-RgN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aRB-is-H4P"/>
+                    <constraint firstItem="sy9-6L-RgN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kNq-rw-8X2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containView" destination="VpA-uL-8Xj" id="K5V-OO-tv3"/>
+                <outlet property="editorLbl" destination="PNQ-FA-iJ6" id="oRn-fd-Aqf"/>
+                <outlet property="textLbl" destination="lYR-DZ-gDB" id="2LP-FK-1eh"/>
+                <outlet property="titleLbl" destination="wb5-Ut-rpq" id="eBO-RK-j6r"/>
+            </connections>
+            <point key="canvasLocation" x="-93.478260869565219" y="97.767857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

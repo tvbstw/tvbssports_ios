@@ -1,0 +1,6 @@
+framework module Pods_tvbssports {
+  umbrella header "Pods-tvbssports-umbrella.h"
+
+  export *
+  module * { export * }
+}

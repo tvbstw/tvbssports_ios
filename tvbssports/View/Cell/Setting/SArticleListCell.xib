@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sArticleListCell" rowHeight="160" id="LIW-RY-qfZ" customClass="SArticleListCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LIW-RY-qfZ" id="fqA-Ks-zQQ">
+                <rect key="frame" x="0.0" y="0.0" width="474" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbk-3s-wmR" userLabel="ShadowView" customClass="ShadowView" customModule="videoCollection" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="454" height="134.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-tI-neh" userLabel="Contain View">
+                                <rect key="frame" x="0.0" y="0.0" width="454" height="134.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default" translatesAutoresizingMaskIntoConstraints="NO" id="rIQ-56-A6f" userLabel="mainIV">
+                                        <rect key="frame" x="10" y="10" width="204" height="114.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rIQ-56-A6f" secondAttribute="height" multiplier="16:9" id="i9u-uk-5U0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TVBS 國際＋，全球動態一手掌握" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-8X-nm5">
+                                        <rect key="frame" x="224" y="10" width="220" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/04/23 11:22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCY-Hk-4oX">
+                                        <rect key="frame" x="224" y="107.5" width="112" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="VideoTimeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1el-Xi-Crv">
+                                        <rect key="frame" x="10" y="133.5" width="434" height="1"/>
+                                        <color key="backgroundColor" name="VideoTimeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="eBX-2b-Rum"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1el-Xi-Crv" secondAttribute="bottom" id="3lC-FP-2of"/>
+                                    <constraint firstItem="I7n-8X-nm5" firstAttribute="top" secondItem="eBi-tI-neh" secondAttribute="top" constant="10" id="9GW-eo-7nj"/>
+                                    <constraint firstItem="I7n-8X-nm5" firstAttribute="leading" secondItem="rIQ-56-A6f" secondAttribute="trailing" constant="10" id="ATp-H9-AVM"/>
+                                    <constraint firstItem="1el-Xi-Crv" firstAttribute="top" secondItem="OCY-Hk-4oX" secondAttribute="bottom" constant="9" id="Bl5-Op-0Bu"/>
+                                    <constraint firstItem="1el-Xi-Crv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rIQ-56-A6f" secondAttribute="bottom" priority="900" constant="9" id="GhV-1N-KfD"/>
+                                    <constraint firstItem="OCY-Hk-4oX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I7n-8X-nm5" secondAttribute="bottom" constant="1" id="JAA-mn-Tx0"/>
+                                    <constraint firstItem="1el-Xi-Crv" firstAttribute="leading" secondItem="eBi-tI-neh" secondAttribute="leading" constant="10" id="LI3-pZ-zhp"/>
+                                    <constraint firstItem="OCY-Hk-4oX" firstAttribute="leading" secondItem="rIQ-56-A6f" secondAttribute="trailing" constant="10" id="Ldk-Tk-Dbz"/>
+                                    <constraint firstItem="1el-Xi-Crv" firstAttribute="trailing" secondItem="eBi-tI-neh" secondAttribute="trailing" constant="-10" id="Leo-5g-qvD"/>
+                                    <constraint firstItem="rIQ-56-A6f" firstAttribute="leading" secondItem="eBi-tI-neh" secondAttribute="leading" constant="10" id="Lml-35-wQr"/>
+                                    <constraint firstItem="1el-Xi-Crv" firstAttribute="top" secondItem="OCY-Hk-4oX" secondAttribute="bottom" constant="9" id="QCD-Ub-XqT"/>
+                                    <constraint firstItem="rIQ-56-A6f" firstAttribute="top" secondItem="eBi-tI-neh" secondAttribute="top" constant="10" id="TlT-L5-EXp"/>
+                                    <constraint firstAttribute="trailing" secondItem="I7n-8X-nm5" secondAttribute="trailing" constant="10" id="cRD-8C-ivR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eBi-tI-neh" secondAttribute="bottom" id="Chs-ux-jAI"/>
+                            <constraint firstItem="eBi-tI-neh" firstAttribute="top" secondItem="mbk-3s-wmR" secondAttribute="top" id="dt7-b6-kBv"/>
+                            <constraint firstItem="eBi-tI-neh" firstAttribute="leading" secondItem="mbk-3s-wmR" secondAttribute="leading" id="i0p-t3-z4o"/>
+                            <constraint firstAttribute="trailing" secondItem="eBi-tI-neh" secondAttribute="trailing" id="srL-B1-e5M"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="mbk-3s-wmR" secondAttribute="trailing" constant="10" id="9ND-lw-IBx"/>
+                    <constraint firstItem="mbk-3s-wmR" firstAttribute="top" secondItem="fqA-Ks-zQQ" secondAttribute="top" constant="10" id="DgA-BS-oq9"/>
+                    <constraint firstAttribute="bottom" secondItem="mbk-3s-wmR" secondAttribute="bottom" constant="8.5" id="Mjh-yq-inc"/>
+                    <constraint firstItem="rIQ-56-A6f" firstAttribute="width" secondItem="fqA-Ks-zQQ" secondAttribute="width" multiplier="0.43" id="ew9-Vo-jiO"/>
+                    <constraint firstItem="mbk-3s-wmR" firstAttribute="leading" secondItem="fqA-Ks-zQQ" secondAttribute="leading" constant="10" id="zqz-ep-IZG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="h1K-bm-9z0"/>
+            <connections>
+                <outlet property="containView" destination="eBi-tI-neh" id="ElY-mL-Zzb"/>
+                <outlet property="dateLbl" destination="OCY-Hk-4oX" id="ObM-Ok-SFF"/>
+                <outlet property="shadowView" destination="mbk-3s-wmR" id="7C4-hI-gK5"/>
+                <outlet property="titleLbl" destination="I7n-8X-nm5" id="IrI-aW-vvo"/>
+            </connections>
+            <point key="canvasLocation" x="194.20289855072465" y="144.30803571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_default" width="428" height="241"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VideoTimeColor">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

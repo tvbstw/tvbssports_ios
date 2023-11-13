@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cImageCell" rowHeight="215" id="vYB-6Q-Ne6" customClass="CImageCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYB-6Q-Ne6" id="JpW-Uz-h1R">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default" translatesAutoresizingMaskIntoConstraints="NO" id="2mQ-5B-Mfp">
+                        <rect key="frame" x="10" y="0.0" width="428.5" height="241"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2mQ-5B-Mfp" secondAttribute="height" multiplier="16:9" id="QEt-py-kJc"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="2mQ-5B-Mfp" firstAttribute="leading" secondItem="JpW-Uz-h1R" secondAttribute="leading" constant="10" id="O1t-XH-cXT"/>
+                    <constraint firstAttribute="trailing" secondItem="2mQ-5B-Mfp" secondAttribute="trailing" constant="10" id="OMf-hB-u83"/>
+                    <constraint firstItem="2mQ-5B-Mfp" firstAttribute="top" secondItem="JpW-Uz-h1R" secondAttribute="top" id="jFN-2C-wb4"/>
+                    <constraint firstAttribute="bottom" secondItem="2mQ-5B-Mfp" secondAttribute="bottom" id="rT7-gp-pIY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="YEI-je-s8z"/>
+            <connections>
+                <outlet property="mainIV" destination="2mQ-5B-Mfp" id="a7n-64-70Q"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="122.20982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_default" width="428" height="241"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
