@@ -33,7 +33,7 @@ class PictureListVC: UIViewController , CHTCollectionViewDelegateWaterfallLayout
     
     func initView() {
 
-        let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 136, height: 40))
+        let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 28))
         let logo = UIImageView(image: .logo)
         logo.frame = CGRect(x: 0, y: 0, width: supportView.frame.size.width, height: supportView.frame.size.height)
         supportView.addSubview(logo)

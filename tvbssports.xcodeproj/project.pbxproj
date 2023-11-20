@@ -231,6 +231,18 @@
 		5551761426943219004BFBBF /* ExtraHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551761226943219004BFBBF /* ExtraHeaderCell.swift */; };
 		5551761A2694322B004BFBBF /* ExtraHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555176192694322B004BFBBF /* ExtraHeaderCell.xib */; };
 		5551761B2694322B004BFBBF /* ExtraHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555176192694322B004BFBBF /* ExtraHeaderCell.xib */; };
+		55DF83FA2B0B39320027E514 /* PredictRotateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F42B0B39320027E514 /* PredictRotateCollectionViewCell.swift */; };
+		55DF83FB2B0B39320027E514 /* PredictRotateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F42B0B39320027E514 /* PredictRotateCollectionViewCell.swift */; };
+		55DF83FC2B0B39320027E514 /* PrologueTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F52B0B39320027E514 /* PrologueTitleCell.xib */; };
+		55DF83FD2B0B39320027E514 /* PrologueTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F52B0B39320027E514 /* PrologueTitleCell.xib */; };
+		55DF83FE2B0B39320027E514 /* PredictRotateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F62B0B39320027E514 /* PredictRotateCell.swift */; };
+		55DF83FF2B0B39320027E514 /* PredictRotateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F62B0B39320027E514 /* PredictRotateCell.swift */; };
+		55DF84002B0B39320027E514 /* PredictRotateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F72B0B39320027E514 /* PredictRotateCell.xib */; };
+		55DF84012B0B39320027E514 /* PredictRotateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F72B0B39320027E514 /* PredictRotateCell.xib */; };
+		55DF84022B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */; };
+		55DF84032B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */; };
+		55DF84042B0B39320027E514 /* PrologueTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */; };
+		55DF84052B0B39320027E514 /* PrologueTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */; };
 		77DE6D0354558942AB56638B /* Pods_tvbssportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8576B88B0368ED93ECB94F7 /* Pods_tvbssportsTests.framework */; };
 		951D6DCA277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
 		951D6DCB277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
@@ -495,6 +507,12 @@
 		4EFCD27C50CE69098F54D0C6 /* Pods-tvbssports-tvbssportsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports-tvbssportsUITests.release.xcconfig"; path = "Target Support Files/Pods-tvbssports-tvbssportsUITests/Pods-tvbssports-tvbssportsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5551761226943219004BFBBF /* ExtraHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraHeaderCell.swift; sourceTree = "<group>"; };
 		555176192694322B004BFBBF /* ExtraHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtraHeaderCell.xib; sourceTree = "<group>"; };
+		55DF83F42B0B39320027E514 /* PredictRotateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictRotateCollectionViewCell.swift; sourceTree = "<group>"; };
+		55DF83F52B0B39320027E514 /* PrologueTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrologueTitleCell.xib; sourceTree = "<group>"; };
+		55DF83F62B0B39320027E514 /* PredictRotateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictRotateCell.swift; sourceTree = "<group>"; };
+		55DF83F72B0B39320027E514 /* PredictRotateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PredictRotateCell.xib; sourceTree = "<group>"; };
+		55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PredictRotateCollectionViewCell.xib; sourceTree = "<group>"; };
+		55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrologueTitleCell.swift; sourceTree = "<group>"; };
 		5B5285A140AA883580AEBA0A /* Pods-tvbssports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports/Pods-tvbssports.debug.xcconfig"; sourceTree = "<group>"; };
 		60F332D01AE7D50C577E0620 /* Pods-tvbssports-tvbssportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports-tvbssportsUITests/Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		951D6DC9277C09A900C5C5DA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -803,6 +821,7 @@
 		355853882592EA7600937650 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55DF83F32B0B39110027E514 /* Instant */,
 				BC4E78352599814F0029E553 /* ShadowView.swift */,
 				3558538C2592EB7200937650 /* LogoNI.swift */,
 				35ECB59E25DD0A9A0064A4AE /* SettingBI.swift */,
@@ -892,6 +911,19 @@
 				351D7E0E25B0139900D775E2 /* GoogleService-Info.plist */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		55DF83F32B0B39110027E514 /* Instant */ = {
+			isa = PBXGroup;
+			children = (
+				55DF83F62B0B39320027E514 /* PredictRotateCell.swift */,
+				55DF83F72B0B39320027E514 /* PredictRotateCell.xib */,
+				55DF83F42B0B39320027E514 /* PredictRotateCollectionViewCell.swift */,
+				55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */,
+				55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */,
+				55DF83F52B0B39320027E514 /* PrologueTitleCell.xib */,
+			);
+			path = Instant;
 			sourceTree = "<group>";
 		};
 		77A80A3FB46569504AF0D5E9 /* Pods */ = {
@@ -1182,6 +1214,7 @@
 			files = (
 				127386672865B5810098FBDF /* PictureContentTitleCell.xib in Resources */,
 				2C5E9DA32762D97800CE790F /* ColCategoryCell.xib in Resources */,
+				55DF84022B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */,
 				2C19B4C12862E1C300170EBB /* ColPictureCell.xib in Resources */,
 				BC4929A02694AE7900773E26 /* CKeyViewVCell.xib in Resources */,
 				EF90BA172861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
@@ -1208,8 +1241,10 @@
 				BC4929882694AE2F00773E26 /* CTitleCell.xib in Resources */,
 				2C5E9DB5276326A200CE790F /* ColHeadLineCell.xib in Resources */,
 				12FCCD5328757AF10089B25B /* BottomShareView.xib in Resources */,
+				55DF84002B0B39320027E514 /* PredictRotateCell.xib in Resources */,
 				BC4929AE2694AE9800773E26 /* CEditorCell.xib in Resources */,
 				BC0F8F25269C8AA400E00A11 /* CAltCell.xib in Resources */,
+				55DF83FC2B0B39320027E514 /* PrologueTitleCell.xib in Resources */,
 				351D7E1125B0139900D775E2 /* GoogleService-Info.plist in Resources */,
 				12218C5C268DB764006DE880 /* ArticleListVCViewCell.xib in Resources */,
 				9544987D275A11F10043DF66 /* HeadlineNewsSmallCell.xib in Resources */,
@@ -1245,6 +1280,7 @@
 			files = (
 				127386682865B5810098FBDF /* PictureContentTitleCell.xib in Resources */,
 				2C5E9DA42762D97800CE790F /* ColCategoryCell.xib in Resources */,
+				55DF84032B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */,
 				2C19B4C22862E1C300170EBB /* ColPictureCell.xib in Resources */,
 				BC4929A12694AE7900773E26 /* CKeyViewVCell.xib in Resources */,
 				EF90BA182861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
@@ -1271,8 +1307,10 @@
 				BC4929892694AE2F00773E26 /* CTitleCell.xib in Resources */,
 				2C5E9DB6276326A200CE790F /* ColHeadLineCell.xib in Resources */,
 				12FCCD5428757AF10089B25B /* BottomShareView.xib in Resources */,
+				55DF84012B0B39320027E514 /* PredictRotateCell.xib in Resources */,
 				BC4929AF2694AE9800773E26 /* CEditorCell.xib in Resources */,
 				BC0F8F26269C8AA400E00A11 /* CAltCell.xib in Resources */,
+				55DF83FD2B0B39320027E514 /* PrologueTitleCell.xib in Resources */,
 				351D7E1225B0139900D775E2 /* GoogleService-Info.plist in Resources */,
 				12218C5D268DB764006DE880 /* ArticleListVCViewCell.xib in Resources */,
 				9544987E275A11F10043DF66 /* HeadlineNewsSmallCell.xib in Resources */,
@@ -1525,10 +1563,12 @@
 				127386612865B2620098FBDF /* PictureContentVC.swift in Sources */,
 				2C485CE12854BF9E00EA940E /* SKDetectingView.swift in Sources */,
 				2C19B4C52862E1C300170EBB /* ColPictureCell.swift in Sources */,
+				55DF83FA2B0B39320027E514 /* PredictRotateCollectionViewCell.swift in Sources */,
 				1273866B2865B7670098FBDF /* PictureContentListCell.swift in Sources */,
 				12218C5A268DB764006DE880 /* ArticleListVCViewCell.swift in Sources */,
 				3558539F2592EB9400937650 /* Util.swift in Sources */,
 				2C485CD72854BF9E00EA940E /* SKIndicatorView.swift in Sources */,
+				55DF83FE2B0B39320027E514 /* PredictRotateCell.swift in Sources */,
 				BC0F8F27269C8AA400E00A11 /* CAltCell.swift in Sources */,
 				BC4929C02694AEC500773E26 /* CTextCell.swift in Sources */,
 				EFD61C032805099E008BEBC4 /* VideoContentVC.swift in Sources */,
@@ -1556,6 +1596,7 @@
 				951D6DCA277C09A900C5C5DA /* BaseVC.swift in Sources */,
 				BCA87C2727ED680B003FAC84 /* SocialKit.swift in Sources */,
 				9544987B275A11F10043DF66 /* HeadlineNewsSmallCell.swift in Sources */,
+				55DF84042B0B39320027E514 /* PrologueTitleCell.swift in Sources */,
 				BC4E783D2599E1BA0029E553 /* VideoListM.swift in Sources */,
 				355853A72592EBA300937650 /* FavoriteVC.swift in Sources */,
 				355853952592EB8A00937650 /* MenuM.swift in Sources */,
@@ -1674,10 +1715,12 @@
 				127386622865B2620098FBDF /* PictureContentVC.swift in Sources */,
 				2C485CE22854BF9E00EA940E /* SKDetectingView.swift in Sources */,
 				2C19B4C62862E1C300170EBB /* ColPictureCell.swift in Sources */,
+				55DF83FB2B0B39320027E514 /* PredictRotateCollectionViewCell.swift in Sources */,
 				1273866C2865B7670098FBDF /* PictureContentListCell.swift in Sources */,
 				12218C5B268DB764006DE880 /* ArticleListVCViewCell.swift in Sources */,
 				35BB2F69259C269E009DF376 /* Util.swift in Sources */,
 				2C485CD82854BF9E00EA940E /* SKIndicatorView.swift in Sources */,
+				55DF83FF2B0B39320027E514 /* PredictRotateCell.swift in Sources */,
 				BC0F8F28269C8AA400E00A11 /* CAltCell.swift in Sources */,
 				BC4929C12694AEC500773E26 /* CTextCell.swift in Sources */,
 				EFD61C042805099E008BEBC4 /* VideoContentVC.swift in Sources */,
@@ -1705,6 +1748,7 @@
 				BCA87C2827ED680B003FAC84 /* SocialKit.swift in Sources */,
 				9544987C275A11F10043DF66 /* HeadlineNewsSmallCell.swift in Sources */,
 				35BB2F70259C269E009DF376 /* VideoListM.swift in Sources */,
+				55DF84052B0B39320027E514 /* PrologueTitleCell.swift in Sources */,
 				35BB2F71259C269E009DF376 /* FavoriteVC.swift in Sources */,
 				35BB2F72259C269E009DF376 /* MenuM.swift in Sources */,
 				2C5E9D612762057900CE790F /* VideoIndexHeadLineCell.swift in Sources */,

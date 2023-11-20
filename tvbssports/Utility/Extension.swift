@@ -12,6 +12,13 @@ import CocoaLumberjack
 import SSZipArchive
 import SwiftDate
 
+// 漸層 Key
+
+private var gradientTopKey: Void?
+private var gradientBottomKey: Void?
+private var gradientLayerKey: Void?
+
+
 extension UIColor {
     /**
      Make color with hex string
@@ -357,13 +364,218 @@ extension UIView {
     }
     
     class func navigtionItemTitleView() -> UIView {
-        let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 136, height: 40))
+        //TODO change width
+        let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 28))
         let logo = UIImageView(image: .logo)
         logo.frame = CGRect(x: 0, y: 0, width: supportView.frame.size.width, height: supportView.frame.size.height)
         supportView.addSubview(logo)
         return supportView
     }
 }
+
+
+// MARK: - 陰影
+extension UIView {
+    
+    /// 陰影 位移
+    @IBInspectable var shadowUIOffset: CGSize {
+        get {
+            return self.layer.shadowOffset
+        }
+
+        set {
+            self.layer.shadowOffset = newValue
+        }
+    }
+    
+    /// 陰影 透明度
+    @IBInspectable var shadowUIOpacity: Float {
+        get {
+            return self.layer.shadowOpacity
+        }
+
+        set {
+            self.layer.shadowOpacity = newValue
+        }
+    }
+    
+    /// 陰影 半徑
+    @IBInspectable var shadowUIRadius: CGFloat {
+        get {
+            return self.layer.shadowRadius
+        }
+
+        set {
+            self.layer.shadowRadius = newValue;
+        }
+    }
+
+    /// 陰影 顏色
+    @IBInspectable var shadowUIColor: UIColor? {
+        get {
+            guard let shadowColor = self.layer.shadowColor else {
+                return nil
+            }
+            
+            return UIColor(cgColor: shadowColor)
+        }
+
+        set {
+            self.layer.shadowColor = newValue?.cgColor
+            self.layer.masksToBounds = false
+        }
+    }
+}
+
+// MARK: - 外框
+extension UIView {
+
+    /// 外框 粗細
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return self.layer.borderWidth
+        }
+
+        set {
+            self.layer.borderWidth = newValue
+        }
+    }
+
+    /// 外框 顏色
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            let cgColor = self.layer.borderColor
+            
+            guard let cgColor = cgColor else {
+                return nil
+            }
+            
+            return UIColor(cgColor: cgColor)
+        }
+
+        set {
+            self.layer.borderColor = newValue?.cgColor
+        }
+    }
+    
+    /// 外框 圓角半徑
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+
+        set {
+            self.layer.cornerRadius = newValue
+            
+            if (newValue != CGFloat.zero) {
+                self.layer.masksToBounds = true
+                self.clipsToBounds = true
+            }
+        }
+    }
+
+    @available(iOS 11, *)
+    /// iOS 11原生切圓角
+    /// - Parameters:
+    ///   - corners: 可傳多個邊
+    ///   - radius: 數值
+    @objc func roundCorners(corners: CACornerMask, radius: CGFloat) {
+        clipsToBounds = true
+        
+        layer.cornerRadius = radius
+        layer.maskedCorners = corners
+    }
+    
+    /// iOS 11(不含)以下切圓角
+    /// - Parameters:
+    ///   - corners: 可傳多個邊
+    ///   - radius: 數值
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        clipsToBounds = true
+
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
+
+// MARK: - 漸層
+extension UIView {
+    
+    /// 漸層 top
+
+    @IBInspectable var gradientTop: UIColor? {
+        get {
+            return objc_getAssociatedObject(self, &gradientTopKey) as? UIColor
+        }
+
+        set {
+            objc_setAssociatedObject(self, &gradientTopKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            updateGradientLayer()
+        }
+    }
+
+    /// 漸層 bottom
+
+    @IBInspectable var gradientBottom: UIColor? {
+        get {
+            return objc_getAssociatedObject(self, &gradientBottomKey) as? UIColor
+        }
+
+        set {
+            objc_setAssociatedObject(self, &gradientBottomKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+            updateGradientLayer()
+        }
+    }
+    
+    /// 0 ~ 1之間 (0, 0 左下角、1, 1右上角)
+    var gradientLayer: CAGradientLayer? {
+        get {
+            return objc_getAssociatedObject(self, &gradientLayerKey) as? CAGradientLayer
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &gradientLayerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    func updateGradientLayer() {
+        updateGradient(colors: [
+            gradientTop,
+            gradientBottom
+        ])
+    }
+
+    /// 由上到下漸層色
+    /// @param colors UIColor
+    func updateGradient(colors: [UIColor?], bounds: CGRect) {
+        
+        let gradientLayer: CAGradientLayer = self.gradientLayer ?? CAGradientLayer()
+        
+        if self.gradientLayer == nil {
+            self.layer.insertSublayer(gradientLayer, at: 0)
+            self.gradientLayer = gradientLayer
+        }
+        
+        gradientLayer.colors = colors.compactMap { (item: UIColor?) -> CGColor? in
+            return item?.cgColor
+        }
+
+        gradientLayer.frame = bounds
+    }
+
+    /// 由上到下漸層色
+    /// @param colors UIColor
+    func updateGradient(colors: [UIColor?]) {
+
+        setNeedsLayout()
+        layoutIfNeeded()
+        
+        updateGradient(colors: colors, bounds: self.bounds)
+    }
+}
+
 
 extension UIViewController {
     func topMostViewController() -> UIViewController {
