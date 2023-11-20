@@ -251,6 +251,14 @@
 		55DF840E2B0B42660027E514 /* MyRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF840C2B0B42660027E514 /* MyRecordCell.swift */; };
 		55DF84102B0B426E0027E514 /* MyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF840F2B0B426E0027E514 /* MyRecordCell.xib */; };
 		55DF84112B0B426E0027E514 /* MyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF840F2B0B426E0027E514 /* MyRecordCell.xib */; };
+		55DF84142B0B47FC0027E514 /* SportsArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84132B0B47FC0027E514 /* SportsArticleListCell.swift */; };
+		55DF84152B0B47FC0027E514 /* SportsArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84132B0B47FC0027E514 /* SportsArticleListCell.swift */; };
+		55DF84172B0B48040027E514 /* SportsArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF84162B0B48040027E514 /* SportsArticleListCell.xib */; };
+		55DF84182B0B48040027E514 /* SportsArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF84162B0B48040027E514 /* SportsArticleListCell.xib */; };
+		55DF841A2B0B4C810027E514 /* SportsArticleListMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84192B0B4C810027E514 /* SportsArticleListMoreCell.swift */; };
+		55DF841B2B0B4C810027E514 /* SportsArticleListMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84192B0B4C810027E514 /* SportsArticleListMoreCell.swift */; };
+		55DF841D2B0B4C890027E514 /* SportsArticleListMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF841C2B0B4C890027E514 /* SportsArticleListMoreCell.xib */; };
+		55DF841E2B0B4C890027E514 /* SportsArticleListMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF841C2B0B4C890027E514 /* SportsArticleListMoreCell.xib */; };
 		77DE6D0354558942AB56638B /* Pods_tvbssportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8576B88B0368ED93ECB94F7 /* Pods_tvbssportsTests.framework */; };
 		951D6DCA277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
 		951D6DCB277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
@@ -525,6 +533,10 @@
 		55DF84092B0B40650027E514 /* RemainTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemainTitle.xib; sourceTree = "<group>"; };
 		55DF840C2B0B42660027E514 /* MyRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordCell.swift; sourceTree = "<group>"; };
 		55DF840F2B0B426E0027E514 /* MyRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordCell.xib; sourceTree = "<group>"; };
+		55DF84132B0B47FC0027E514 /* SportsArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsArticleListCell.swift; sourceTree = "<group>"; };
+		55DF84162B0B48040027E514 /* SportsArticleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportsArticleListCell.xib; sourceTree = "<group>"; };
+		55DF84192B0B4C810027E514 /* SportsArticleListMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsArticleListMoreCell.swift; sourceTree = "<group>"; };
+		55DF841C2B0B4C890027E514 /* SportsArticleListMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportsArticleListMoreCell.xib; sourceTree = "<group>"; };
 		5B5285A140AA883580AEBA0A /* Pods-tvbssports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports/Pods-tvbssports.debug.xcconfig"; sourceTree = "<group>"; };
 		60F332D01AE7D50C577E0620 /* Pods-tvbssports-tvbssportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports-tvbssportsUITests/Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		951D6DC9277C09A900C5C5DA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -833,6 +845,7 @@
 		355853882592EA7600937650 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55DF84122B0B47E00027E514 /* News */,
 				55DF83F32B0B39110027E514 /* Instant */,
 				BC4E78352599814F0029E553 /* ShadowView.swift */,
 				3558538C2592EB7200937650 /* LogoNI.swift */,
@@ -940,6 +953,17 @@
 				55DF840F2B0B426E0027E514 /* MyRecordCell.xib */,
 			);
 			path = Instant;
+			sourceTree = "<group>";
+		};
+		55DF84122B0B47E00027E514 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				55DF84132B0B47FC0027E514 /* SportsArticleListCell.swift */,
+				55DF84162B0B48040027E514 /* SportsArticleListCell.xib */,
+				55DF84192B0B4C810027E514 /* SportsArticleListMoreCell.swift */,
+				55DF841C2B0B4C890027E514 /* SportsArticleListMoreCell.xib */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		77A80A3FB46569504AF0D5E9 /* Pods */ = {
@@ -1229,10 +1253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				127386672865B5810098FBDF /* PictureContentTitleCell.xib in Resources */,
+				55DF841D2B0B4C890027E514 /* SportsArticleListMoreCell.xib in Resources */,
 				2C5E9DA32762D97800CE790F /* ColCategoryCell.xib in Resources */,
 				55DF84022B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */,
 				2C19B4C12862E1C300170EBB /* ColPictureCell.xib in Resources */,
 				BC4929A02694AE7900773E26 /* CKeyViewVCell.xib in Resources */,
+				55DF84172B0B48040027E514 /* SportsArticleListCell.xib in Resources */,
 				EF90BA172861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
 				BC7E457B26A13DA70071EFE7 /* SArticleListCell.xib in Resources */,
 				BC7B2FE3259986F70097AE49 /* ApiStatusCell.xib in Resources */,
@@ -1297,10 +1323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				127386682865B5810098FBDF /* PictureContentTitleCell.xib in Resources */,
+				55DF841E2B0B4C890027E514 /* SportsArticleListMoreCell.xib in Resources */,
 				2C5E9DA42762D97800CE790F /* ColCategoryCell.xib in Resources */,
 				55DF84032B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */,
 				2C19B4C22862E1C300170EBB /* ColPictureCell.xib in Resources */,
 				BC4929A12694AE7900773E26 /* CKeyViewVCell.xib in Resources */,
+				55DF84182B0B48040027E514 /* SportsArticleListCell.xib in Resources */,
 				EF90BA182861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
 				BC7E457C26A13DA70071EFE7 /* SArticleListCell.xib in Resources */,
 				35BB2F8C259C269E009DF376 /* ApiStatusCell.xib in Resources */,
@@ -1662,6 +1690,7 @@
 				128655492695A0C60084B021 /* LLSnakePageControl.swift in Sources */,
 				1286554B2695A0C60084B021 /* LLCycleScrollViewCell.swift in Sources */,
 				BCA0AFBF268EC7B2007CBDD8 /* ContentM.swift in Sources */,
+				55DF841A2B0B4C810027E514 /* SportsArticleListMoreCell.swift in Sources */,
 				2CB2970427B2103B00B257B5 /* ArticleLoadingView.swift in Sources */,
 				95449875275A11D70043DF66 /* HeadlineNewsBigCell.swift in Sources */,
 				35D0B8792592F7FE00AE0DE2 /* BaseList.swift in Sources */,
@@ -1709,6 +1738,7 @@
 				128655432695A0C60084B021 /* LLViewExtensions.swift in Sources */,
 				BC7B2FE1259986EE0097AE49 /* ApiStatusCell.swift in Sources */,
 				BC4929CA2694AED900773E26 /* CImageCell.swift in Sources */,
+				55DF84142B0B47FC0027E514 /* SportsArticleListCell.swift in Sources */,
 				2C485CD12854BF9E00EA940E /* SKMesurement.swift in Sources */,
 				2C15AAE5275CDA4C00839816 /* MailProvider.swift in Sources */,
 				BC7E458526A166E70071EFE7 /* STitleCell.swift in Sources */,
@@ -1816,6 +1846,7 @@
 				1286554A2695A0C60084B021 /* LLSnakePageControl.swift in Sources */,
 				1286554C2695A0C70084B021 /* LLCycleScrollViewCell.swift in Sources */,
 				BCA0AFC0268EC7B2007CBDD8 /* ContentM.swift in Sources */,
+				55DF841B2B0B4C810027E514 /* SportsArticleListMoreCell.swift in Sources */,
 				EFA9E24B27EB16EA003630AF /* OpenBrowserUrlLayer.swift in Sources */,
 				2CB2970527B2103B00B257B5 /* ArticleLoadingView.swift in Sources */,
 				95449876275A11D70043DF66 /* HeadlineNewsBigCell.swift in Sources */,
@@ -1863,6 +1894,7 @@
 				128655442695A0C60084B021 /* LLViewExtensions.swift in Sources */,
 				35BB2F88259C269E009DF376 /* ApiStatusCell.swift in Sources */,
 				BC4929CB2694AED900773E26 /* CImageCell.swift in Sources */,
+				55DF84152B0B47FC0027E514 /* SportsArticleListCell.swift in Sources */,
 				2C485CD22854BF9E00EA940E /* SKMesurement.swift in Sources */,
 				2C15AAE6275CDA4C00839816 /* MailProvider.swift in Sources */,
 				BC7E458626A166E70071EFE7 /* STitleCell.swift in Sources */,
