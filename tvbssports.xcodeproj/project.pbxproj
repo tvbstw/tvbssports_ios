@@ -243,6 +243,14 @@
 		55DF84032B0B39320027E514 /* PredictRotateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */; };
 		55DF84042B0B39320027E514 /* PrologueTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */; };
 		55DF84052B0B39320027E514 /* PrologueTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */; };
+		55DF84072B0B405C0027E514 /* RemainTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84062B0B405C0027E514 /* RemainTitle.swift */; };
+		55DF84082B0B405C0027E514 /* RemainTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF84062B0B405C0027E514 /* RemainTitle.swift */; };
+		55DF840A2B0B40650027E514 /* RemainTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF84092B0B40650027E514 /* RemainTitle.xib */; };
+		55DF840B2B0B40650027E514 /* RemainTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF84092B0B40650027E514 /* RemainTitle.xib */; };
+		55DF840D2B0B42660027E514 /* MyRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF840C2B0B42660027E514 /* MyRecordCell.swift */; };
+		55DF840E2B0B42660027E514 /* MyRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF840C2B0B42660027E514 /* MyRecordCell.swift */; };
+		55DF84102B0B426E0027E514 /* MyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF840F2B0B426E0027E514 /* MyRecordCell.xib */; };
+		55DF84112B0B426E0027E514 /* MyRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DF840F2B0B426E0027E514 /* MyRecordCell.xib */; };
 		77DE6D0354558942AB56638B /* Pods_tvbssportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8576B88B0368ED93ECB94F7 /* Pods_tvbssportsTests.framework */; };
 		951D6DCA277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
 		951D6DCB277C09A900C5C5DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D6DC9277C09A900C5C5DA /* BaseVC.swift */; };
@@ -513,6 +521,10 @@
 		55DF83F72B0B39320027E514 /* PredictRotateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PredictRotateCell.xib; sourceTree = "<group>"; };
 		55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PredictRotateCollectionViewCell.xib; sourceTree = "<group>"; };
 		55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrologueTitleCell.swift; sourceTree = "<group>"; };
+		55DF84062B0B405C0027E514 /* RemainTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainTitle.swift; sourceTree = "<group>"; };
+		55DF84092B0B40650027E514 /* RemainTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemainTitle.xib; sourceTree = "<group>"; };
+		55DF840C2B0B42660027E514 /* MyRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordCell.swift; sourceTree = "<group>"; };
+		55DF840F2B0B426E0027E514 /* MyRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordCell.xib; sourceTree = "<group>"; };
 		5B5285A140AA883580AEBA0A /* Pods-tvbssports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports/Pods-tvbssports.debug.xcconfig"; sourceTree = "<group>"; };
 		60F332D01AE7D50C577E0620 /* Pods-tvbssports-tvbssportsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; path = "Target Support Files/Pods-tvbssports-tvbssportsUITests/Pods-tvbssports-tvbssportsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		951D6DC9277C09A900C5C5DA /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -922,6 +934,10 @@
 				55DF83F82B0B39320027E514 /* PredictRotateCollectionViewCell.xib */,
 				55DF83F92B0B39320027E514 /* PrologueTitleCell.swift */,
 				55DF83F52B0B39320027E514 /* PrologueTitleCell.xib */,
+				55DF84062B0B405C0027E514 /* RemainTitle.swift */,
+				55DF84092B0B40650027E514 /* RemainTitle.xib */,
+				55DF840C2B0B42660027E514 /* MyRecordCell.swift */,
+				55DF840F2B0B426E0027E514 /* MyRecordCell.xib */,
 			);
 			path = Instant;
 			sourceTree = "<group>";
@@ -1220,7 +1236,9 @@
 				EF90BA172861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
 				BC7E457B26A13DA70071EFE7 /* SArticleListCell.xib in Resources */,
 				BC7B2FE3259986F70097AE49 /* ApiStatusCell.xib in Resources */,
+				55DF840A2B0B40650027E514 /* RemainTitle.xib in Resources */,
 				9581F34F25A300E30020D001 /* SearchEmptyCell.xib in Resources */,
+				55DF84102B0B426E0027E514 /* MyRecordCell.xib in Resources */,
 				354895682592E9A700F12224 /* LaunchScreen.storyboard in Resources */,
 				120D6E302863112600D40F5D /* ImageUICollectionViewCell.xib in Resources */,
 				355853902592EB7C00937650 /* VideoCell.xib in Resources */,
@@ -1286,7 +1304,9 @@
 				EF90BA182861942500770E6A /* YTPlayerView-iframe-player.html in Resources */,
 				BC7E457C26A13DA70071EFE7 /* SArticleListCell.xib in Resources */,
 				35BB2F8C259C269E009DF376 /* ApiStatusCell.xib in Resources */,
+				55DF840B2B0B40650027E514 /* RemainTitle.xib in Resources */,
 				9581F35025A300E30020D001 /* SearchEmptyCell.xib in Resources */,
+				55DF84112B0B426E0027E514 /* MyRecordCell.xib in Resources */,
 				35BB2F8D259C269E009DF376 /* LaunchScreen.storyboard in Resources */,
 				120D6E312863112600D40F5D /* ImageUICollectionViewCell.xib in Resources */,
 				35BB2F8E259C269E009DF376 /* VideoCell.xib in Resources */,
@@ -1602,6 +1622,7 @@
 				355853952592EB8A00937650 /* MenuM.swift in Sources */,
 				2C485CD52854BF9E00EA940E /* SKPaginationView.swift in Sources */,
 				2C5E9D602762057900CE790F /* VideoIndexHeadLineCell.swift in Sources */,
+				55DF840D2B0B42660027E514 /* MyRecordCell.swift in Sources */,
 				2C485CFD2854BF9E00EA940E /* SKButtons.swift in Sources */,
 				EF90BA212861942B00770E6A /* YoutubePlayerComponent.swift in Sources */,
 				2C485CF92854BF9E00EA940E /* SKCacheable.swift in Sources */,
@@ -1646,6 +1667,7 @@
 				35D0B8792592F7FE00AE0DE2 /* BaseList.swift in Sources */,
 				2C5E9D6A2762059600CE790F /* VideoIndexCategoryCell.swift in Sources */,
 				3548955E2592E9A600F12224 /* AppDelegate.swift in Sources */,
+				55DF84072B0B405C0027E514 /* RemainTitle.swift in Sources */,
 				355853AD2592EBA300937650 /* VideoListVC.swift in Sources */,
 				127386652865B5810098FBDF /* PictureContentTitleCell.swift in Sources */,
 				BC7B2FE5259987090097AE49 /* EmptyCell.swift in Sources */,
@@ -1754,6 +1776,7 @@
 				2C5E9D612762057900CE790F /* VideoIndexHeadLineCell.swift in Sources */,
 				2C485CD62854BF9E00EA940E /* SKPaginationView.swift in Sources */,
 				BC7E458C26A168190071EFE7 /* SContentCell.swift in Sources */,
+				55DF840E2B0B42660027E514 /* MyRecordCell.swift in Sources */,
 				EFAD50E32864067800553B76 /* PlayerRelateUIKitExtension.swift in Sources */,
 				2C485CFE2854BF9E00EA940E /* SKButtons.swift in Sources */,
 				EF90BA222861942B00770E6A /* YoutubePlayerComponent.swift in Sources */,
@@ -1798,6 +1821,7 @@
 				95449876275A11D70043DF66 /* HeadlineNewsBigCell.swift in Sources */,
 				35BB2F7A259C269E009DF376 /* BaseList.swift in Sources */,
 				2C5E9D6B2762059600CE790F /* VideoIndexCategoryCell.swift in Sources */,
+				55DF84082B0B405C0027E514 /* RemainTitle.swift in Sources */,
 				35BB2F7B259C269E009DF376 /* AppDelegate.swift in Sources */,
 				35BB2F7C259C269E009DF376 /* VideoListVC.swift in Sources */,
 				127386662865B5810098FBDF /* PictureContentTitleCell.swift in Sources */,
