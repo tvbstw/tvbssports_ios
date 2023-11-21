@@ -27,6 +27,7 @@ target 'tvbssports' do
   pod 'StepSlider'
   pod 'SwiftDate'
   pod 'CHTCollectionViewWaterfallLayout'
+  pod 'FSPagerView'
 
   
   pod 'XCDYouTubeKit', :git => 'https://github.com/Candygoblen123/XCDYouTubeKit'
@@ -84,7 +85,7 @@ target 'tvbssports dev' do
   pod 'StepSlider'
   pod 'SwiftDate'
   pod 'CHTCollectionViewWaterfallLayout'
-
+  pod 'FSPagerView'
   
   pod 'XCDYouTubeKit', :git => 'https://github.com/Candygoblen123/XCDYouTubeKit'
   
