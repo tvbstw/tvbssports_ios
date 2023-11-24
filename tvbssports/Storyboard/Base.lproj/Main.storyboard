@@ -96,7 +96,7 @@
             <objects>
                 <viewController storyboardIdentifier="sportsIndexVC" id="KP7-J0-NTB" customClass="SportsIndexVC" customModule="tvbssports" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7RK-3r-gXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2I5-Te-OFI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -569,7 +569,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NCU-kf-kW6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="即時新聞" id="O1c-gW-VyU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Eg-V8-u1n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1Eg-V8-u1n">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -587,7 +587,7 @@
             <objects>
                 <viewController id="KgD-cL-2it" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aX2-D5-y0M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cCb-ng-gZT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -603,7 +603,7 @@
             <objects>
                 <viewController id="edu-Vs-oys" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qqp-FP-eBD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="wzS-yq-ahm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -620,7 +620,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ekf-bW-iGH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="賽事" id="InG-W7-xvv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0WT-IW-hpX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0WT-IW-hpX">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -639,7 +639,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXP-dg-4Qe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="排行榜" id="fWc-gc-zD9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jNd-vM-caQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jNd-vM-caQ">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

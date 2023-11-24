@@ -13,9 +13,8 @@ import XLPagerTabStrip
 
 class SportsIndexVC: UIViewController {
     
-    fileprivate let predictRotateCell = "predictRotateCell"
-    fileprivate let predictRotateCollectionViewCell = "predictRotateCollectionViewCell"
     fileprivate let prologueTitleCell = "prologueTitleCell"
+    fileprivate let predictRotateCell = "predictRotateCell"
     fileprivate let remainTitle = "remainTitle"
     fileprivate let myRecordCell = "myRecordCell"
     fileprivate let sportsNewsCarouselCell = "sportsNewsCarouselCell"
@@ -40,6 +39,9 @@ class SportsIndexVC: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = ""
         self.navigationController?.navigationBar.titleTextAttributes =  [NSAttributedString.Key.foregroundColor:UIColor.textColor,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 19.0, weight: .medium)]
+        initView()
+//        setupNotchBackground()
+        setRefresh()
         addTableView()
         setRefresh()
         setLoadingMsg()
@@ -74,8 +76,7 @@ class SportsIndexVC: UIViewController {
         let settingBI = MemberBarItem()
         self.navigationItem.rightBarButtonItem = settingBI
         self.navigationController?.navigationBar.titleTextAttributes =  [NSAttributedString.Key.foregroundColor:UIColor.textColor,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 19.0, weight: .medium)]
-//        self.navigationItem.title = "鏡頭看世界"
-        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.black
         let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 28))
         let logo = UIImageView(image: .logo)
         logo.frame = CGRect(x: 0, y: 0, width: supportView.frame.size.width, height: supportView.frame.size.height)
@@ -83,8 +84,28 @@ class SportsIndexVC: UIViewController {
         self.navigationItem.titleView = supportView
         self.navigationItem.titleView?.contentMode = .scaleAspectFit
         
-        self.setRefresh()
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColor.black // 替換為你想要的背景色
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        } else {
+            // Fallback on earlier versions
+            navigationController?.navigationBar.barTintColor = UIColor.black
+        }
+        
     }
+    
+//    func setupNotchBackground() {
+//        if #available(iOS 11.0, *) {
+//            let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+//            let notchView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: statusBarHeight))
+//            notchView.backgroundColor = UIColor.red // 這裡的顏色可以替換為你想要的任何顏色
+//
+//            view.addSubview(notchView)
+//        }
+//    }
 
     @objc func customBackItemClick() {
         self.navigationController?.popViewController(animated: true)
@@ -241,70 +262,51 @@ class SportsIndexVC: UIViewController {
 
 extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataList?.count ?? 0
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard  let data = self.dataList?[indexPath.row] else {
+        guard  (self.dataList?[indexPath.row]) != nil else {
             return UITableViewCell()
         }
         switch indexPath.row {
-            case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: stcarouselcell, for: indexPath) as! STCarouselCell
-                cell.selectionStyle = .none
-                cell.configureWithData(data.artcleListRotateList)
-                cell.stCarouselView.delegate = self
-                cell.selectionStyle = .none
-                return cell
-//            case 1:
-//            case 2:
-//            case 3:
-            default:
-                return UITableViewCell()
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: prologueTitleCell, for: indexPath) as! PrologueTitleCell
+            cell.selectionStyle = .none
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: predictRotateCell, for: indexPath) as! PredictRotateCell
+            cell.selectionStyle = .none
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: remainTitle, for: indexPath) as! RemainTitle
+            cell.selectionStyle = .none
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: myRecordCell, for: indexPath) as! MyRecordCell
+            cell.selectionStyle = .none
+            return cell
+
+        default:
+            return UITableViewCell()
         }
-        
-//        switch data.cellLayout {
-//        case .rotate :
-//            let cell = tableView.dequeueReusableCell(withIdentifier: stcarouselcell, for: indexPath) as! STCarouselCell
-//            cell.selectionStyle = .none
-//            cell.configureWithData(data.artcleListRotateList)
-//            cell.stCarouselView.delegate = self
-//            cell.selectionStyle = .none
-//            return cell
-//        case .artcleList :
-//            let cell = tableView.dequeueReusableCell(withIdentifier: ArticleListCell) as! ArticleListVCViewCell
-//            cell.isHiddenPlayicon = true
-//            cell.configureWithData(data.artcleItem)
-//            cell.selectionStyle = .none
-//            return cell
-//        case .apiStatus :
-//            let cell = tableView.dequeueReusableCell(withIdentifier: apistatusCell, for: indexPath) as! ApiStatusCell
-//            cell.delegate = self
-//            cell.configureWithData(data.apiStatus)
-//            return cell
-//        case .empty :
-//            let cell = tableView.dequeueReusableCell(withIdentifier: apistatusCell, for: indexPath) as! ApiStatusCell
-//            cell.delegate = self
-//            cell.configureWithData(.empty)
-//            return cell
-//        default:
-//            return UITableViewCell()
-//        }
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let apiUrl = dataList?[safe:indexPath.row]?.artcleItem?.api_url, let title = dataList?[safe:indexPath.row]?.artcleItem?.title, let newsID = dataList?[safe:indexPath.row]?.artcleItem?.news_id, let category = dataList?[safe:indexPath.row]?.artcleItem?.enName, let categoryCh = dataList?[safe:indexPath.row]?.artcleItem?.name else {
-//            return
-//        }
-//        let faEvent  = FaEvent.click_article.rawValue
-//        let faAction = "world_article"
-//        let faLabel = "\(title)_\(newsID)_文章_全球文章列表"
-//        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
-//
-//        let vc = ContentVC(apiUrl,categoryCh)
-//        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 1 {
+            return 250
+        } else{
+            return UITableView.automaticDimension
+        }
+        
+        
     }
     
 }
