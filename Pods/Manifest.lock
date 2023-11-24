@@ -110,6 +110,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - FSPagerView (0.8.3)
   - GDPerformanceView-Swift (2.1.1)
   - GoogleAppMeasurement (10.17.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.17.0)
@@ -210,6 +211,7 @@ DEPENDENCIES:
   - Firebase/Performance
   - Flurry-iOS-SDK/FlurrySDK
   - FMDB
+  - FSPagerView
   - GDPerformanceView-Swift
   - IQKeyboardManagerSwift
   - KeychainAccess
@@ -255,6 +257,7 @@ SPEC REPOS:
     - FirebaseSharedSwift
     - Flurry-iOS-SDK
     - FMDB
+    - FSPagerView
     - GDPerformanceView-Swift
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -315,6 +318,7 @@ SPEC CHECKSUMS:
   FirebaseSharedSwift: e8fe8d63d434266a1b2c7f02807d5b64462e1851
   Flurry-iOS-SDK: 402045d874e9e330d2fbcdf48d82727292ade109
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
   GoogleAppMeasurement: 4dcddfc7f102825c1c4e6422cb35567b101881a7
   GoogleDataTransport: 54dee9d48d14580407f8f5fbf2f496e92437a2f2
@@ -340,6 +344,6 @@ SPEC CHECKSUMS:
   XCDYouTubeKit: b120aced3d8638ffb570c5450cddb5a1dac448c7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 6e9c7c32ae770583ea9ae7c087855e3f713b1916
+PODFILE CHECKSUM: c158e06506fd03d6147894485aa050feae7f74a2
 
 COCOAPODS: 1.14.2

@@ -25,21 +25,32 @@ enum ErrorType: String {
 }
 
 enum CellLayout: String {
-    case video        = "video"
-    case apiStatus    = "status"
-    case unreachable  = "unreachable"
-    case empty        = "empty"
-    case noMoreData   = "noMoreData"
-    case artcleList   = "artcleList"
-    case rotate       = "rotate"
-    case content      = "content"
-    case extraHeader  = "extraHeader"
-    case headline     = "headline"
-    case category     = "category"
-    case news         = "news"
-    case live         = "live"
-    case picture      = "picture"
-    case `default`    = "default"
+    case video          = "video"
+    case apiStatus      = "status"
+    case unreachable    = "unreachable"
+    case empty          = "empty"
+    case noMoreData     = "noMoreData"
+    case artcleList     = "artcleList"
+    case rotate         = "rotate"
+    case content        = "content"
+    case extraHeader    = "extraHeader"
+    case headline       = "headline"
+    case category       = "category"
+    case news           = "news"
+    case live           = "live"
+    case picture        = "picture"
+    
+    case prologueTitle  = "prologueTitle"
+    case predictRotate  = "predictRotate"
+    case remainTitle    = "remainTitle"
+    case hotNewsRotate  = "hotNewsRotate"
+    case listMore       = "listMore"
+    case myRecord       = "myRecord"
+    case bigCardAD      = "bigCardAD"
+    case listCardAD     = "listCardAD"
+    case bannerAD       = "bannerAD"
+    
+    case `default`      = "default"
 }
 
 enum FaEvent: String {

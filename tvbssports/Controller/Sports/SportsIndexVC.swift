@@ -6,432 +6,325 @@
 //  Copyright © 2023 Eddie. All rights reserved.
 //
 
+
 import UIKit
-import SnapKit
 import MJRefresh
-import Kingfisher
-import KingfisherWebP
-import CocoaLumberjack
-import SafariServices
+import XLPagerTabStrip
 
-
-class SportsIndexVC: PlayerVC {
-    fileprivate var tableView:UITableView?
-    fileprivate var header: MJRefreshGifHeader!
-    fileprivate var footer: MJRefreshBackGifFooter!
+class SportsIndexVC: UIViewController {
+    
     fileprivate let predictRotateCell = "predictRotateCell"
     fileprivate let predictRotateCollectionViewCell = "predictRotateCollectionViewCell"
     fileprivate let prologueTitleCell = "prologueTitleCell"
-    fileprivate let remainTitleCell = "remainTitle"
+    fileprivate let remainTitle = "remainTitle"
     fileprivate let myRecordCell = "myRecordCell"
+    fileprivate let sportsNewsCarouselCell = "sportsNewsCarouselCell"
     fileprivate let sportsArticleListMoreCell = "sportsArticleListMoreCell"
     fileprivate let sportsArticleListCell = "sportsArticleListCell"
-
-        
-    fileprivate let videoIndexHeadLineCell = "videoIndexHeadLineCell"
-    fileprivate let videoIndexCategoryCell = "videoIndexCategoryCell"
-    fileprivate let videoIndexPictureCell  = "videoIndexPictureCell"
-    fileprivate let videoCell      = "videoCell"
-    fileprivate let newsCell       = "ArticleListCell"
-    fileprivate let apiStatusCell  = "apistatusCell"
     
-    fileprivate var dataArr = [ChosenList]()
-    fileprivate var nextPage:String = ""
+    fileprivate let stcarouselcell  = "stcarouselcell"
+    fileprivate let noMoreDataCell  = "noMoreDataCell"
+    fileprivate let SearchEmptyCell = "SearchEmptyCell"
+    fileprivate let ArticleListCell = "ArticleListCell"
+    fileprivate let apistatusCell   = "apistatusCell"
     
-    lazy var viewModel: VideoIndexViewModel = {
-        return VideoIndexViewModel()
-    }()
+    fileprivate var tableView:UITableView?
+    fileprivate var searchHeader: MJRefreshGifHeader!
+    fileprivate var footer: MJRefreshBackGifFooter!
+    var nextPage:String?
+    var dataList: [ChosenList]?
+    var rotateList:[ArticleListContent]?
+    var loadingText: UILabel?
     
-    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initAnnouncement()
-        whetherShowAnnouncement()
-        initVM()
-        addNotification()
-        /**
-         第一次進APP時runPushOrHeadline notification還沒註冊時需設定Timer執行一次runPushOrHeadline()
-         */
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (t) in
-            PushVM.shared.runPushOrHeadline(nil)
-        }
-        
-        PushVM.shared.addNotifications()
-        
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.titleTextAttributes =  [NSAttributedString.Key.foregroundColor:UIColor.textColor,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 19.0, weight: .medium)]
+        addTableView()
+        setRefresh()
+        setLoadingMsg()
+        queryData()
+        addNotfication()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let faEvent  = FaEvent.show_screen.rawValue
-        let faAction = "Main Page_index"
-        let faLabel = "開啟_首頁"
-        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
+//        let faEvent  = FaEvent.show_screen.rawValue
+//        let faAction = "Main Page_World"
+//        let faLabel = "首頁_全球文章列表"
+//        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
     }
     
     deinit {
-        removeNotification()
+        self.removeNotfication()
     }
     
-    //MARK: Custom Methods
-    func initAnnouncement() {
-        viewModel.dataFetchforMarquee()
+    func addNotfication() {
+
     }
     
-    func whetherShowAnnouncement() {
-        viewModel.checkMarqueeClosure = {[weak self] marquee in
-            DispatchQueue.main.async {
-                guard let mq = marquee, let isShow = mq.isShow, let content = mq.content else {
-                    self?.initView()
-                    return
-                }
-                
-                guard isShow && !content.isEmpty else {
-                    self?.initView()
-                    return
-                }
-                
-                self?.initView(isShow)
-                let marqueeView = MarqueeView(content: content)
-                self?.view.addSubview(marqueeView)
-                marqueeView.snp.makeConstraints { (make) in
-                    make.width.equalToSuperview()
-                    make.height.equalTo(40)
-                }
-            }
-        }
+    func removeNotfication() {
     }
     
-    func initView(_ isShowMarquee: Bool = false) {
-        setTableView(isShowMarquee)
-        setRefresh()
-        setLoadMore()
-    }
-    
-    func initVM() {
-        viewModel.reloadTableViewClosure = {[weak self] behavior, indexPaths in
-            DispatchQueue.main.async {
-                switch behavior {
-                case .refresh:
-                    self?.tableView?.reloadData()
-                    self?.tableView?.mj_header?.endRefreshing()
-                case .loadMore:
-                    UIView.setAnimationsEnabled(false)
-                    self?.tableView?.insertRows(at: indexPaths, with: .none)
-                    UIView.setAnimationsEnabled(true)
-                    self?.tableView?.mj_footer?.endRefreshing()
-                }
-            }
-        }
+    func initView() {
+        self.navigationItem.hidesBackButton = true
+        let btn = UIButton.customBtnForBarButtonItem("left", "", "icon_back")
+        btn.addTarget(self, action: #selector(customBackItemClick), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        let settingBI = MemberBarItem()
+        self.navigationItem.rightBarButtonItem = settingBI
+        self.navigationController?.navigationBar.titleTextAttributes =  [NSAttributedString.Key.foregroundColor:UIColor.textColor,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 19.0, weight: .medium)]
+//        self.navigationItem.title = "鏡頭看世界"
         
-        viewModel.dataFetch()
+        let supportView = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 28))
+        let logo = UIImageView(image: .logo)
+        logo.frame = CGRect(x: 0, y: 0, width: supportView.frame.size.width, height: supportView.frame.size.height)
+        supportView.addSubview(logo)
+        self.navigationItem.titleView = supportView
+        self.navigationItem.titleView?.contentMode = .scaleAspectFit
+        
+        self.setRefresh()
+    }
+
+    @objc func customBackItemClick() {
+        self.navigationController?.popViewController(animated: true)
     }
     
-    func setTableView(_ isShowMarquee: Bool = false) {
+    func addTableView() {
         self.tableView = UITableView(frame: CGRect.zero, style: .plain)
-        self.tableView?.separatorStyle = .none
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
+        self.tableView?.separatorStyle = .none
+        self.tableView?.tableFooterView = UIView(frame: .zero)
+        self.tableView?.showsVerticalScrollIndicator = false
         self.tableView?.backgroundColor = UIColor.backgroundColor
+        
         if #available(iOS 11.0, *) {
-            self.tableView?.estimatedSectionHeaderHeight = 0
-            self.tableView?.estimatedSectionFooterHeight = 0
-            self.tableView?.estimatedRowHeight = 100
+            self.tableView?.contentInsetAdjustmentBehavior = .never
         }
+        
         if let unTableView = self.tableView {
             self.view.addSubview(unTableView)
-            
             unTableView.snp.makeConstraints({ (make) in
-                if isShowMarquee {
-                    make.edges.equalTo(UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0))
-                } else {
-                    make.edges.equalTo(UIEdgeInsets.zero)
-                }
+                make.edges.equalTo(UIEdgeInsets.zero)
             })
         }
         
-        self.tableView?.register(UINib(nibName: "VideoIndexHeadLineCell", bundle: nil), forCellReuseIdentifier: videoIndexHeadLineCell)
-        self.tableView?.register(UINib(nibName: "VideoIndexCategoryCell", bundle: nil), forCellReuseIdentifier: videoIndexCategoryCell)
-        self.tableView?.register(UINib(nibName: "VideoIndexPictureCell", bundle: nil), forCellReuseIdentifier: videoIndexPictureCell)
-        self.tableView?.register(UINib(nibName: "VideoCell", bundle: nil), forCellReuseIdentifier: videoCell)
-        self.tableView?.register(UINib(nibName: "ArticleListVCViewCell", bundle: nil), forCellReuseIdentifier: newsCell)
-        self.tableView?.register(UINib(nibName: "ApiStatusCell", bundle: nil), forCellReuseIdentifier: apiStatusCell)
+        self.tableView?.register(UINib(nibName: "PredictRotateCell", bundle: nil), forCellReuseIdentifier: predictRotateCell)
+        self.tableView?.register(UINib(nibName: "PrologueTitleCell", bundle: nil), forCellReuseIdentifier: prologueTitleCell)
+        self.tableView?.register(UINib(nibName: "RemainTitle", bundle: nil), forCellReuseIdentifier: remainTitle)
+        self.tableView?.register(UINib(nibName: "MyRecordCell", bundle: nil), forCellReuseIdentifier: myRecordCell)
+        self.tableView?.register(UINib(nibName: "SportsNewsCarouselCell", bundle: nil), forCellReuseIdentifier: sportsNewsCarouselCell)
+        self.tableView?.register(UINib(nibName: "SportsArticleListMoreCell", bundle: nil), forCellReuseIdentifier: sportsArticleListMoreCell)
+        self.tableView?.register(UINib(nibName: "sportsArticleListCell", bundle: nil), forCellReuseIdentifier: sportsArticleListCell)
+        self.tableView?.register(UINib(nibName: "ApiStatusCell", bundle: nil), forCellReuseIdentifier: apistatusCell)
     }
     
     func setRefresh() {
-        self.header = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: #selector(refresh))
-        self.header.backgroundColor = UIColor.backgroundColor
-        self.header.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .idle)
-        self.header.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .pulling)
-        self.header.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .refreshing)
-        self.header.stateLabel?.isHidden = true
-        self.header.lastUpdatedTimeLabel?.isHidden = true
-        self.tableView?.mj_header = self.header
+        //下拉更新
+        self.searchHeader = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: #selector(refresh))
+        self.searchHeader.backgroundColor = UIColor.backgroundColor
+        self.searchHeader.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .idle)
+        self.searchHeader.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .pulling)
+        self.searchHeader.setImages(SM.loadingImgArr, duration: LOADING_IMGS_DURATION, for: .refreshing)
+        self.searchHeader.stateLabel?.isHidden = true
+        self.searchHeader.lastUpdatedTimeLabel?.isHidden = true
+        self.tableView?.mj_header = self.searchHeader
     }
     
     @objc func refresh() {
-        viewModel.dataFetch()
+        queryData()
+    }
+
+    
+    //MARK: API
+    func queryData() {
+        self.nextPage = ""
+        ArticleListM.shared.getArticleListItem(apiUrl: GLOBALNEWS_API) { (result) in
+            switch result {
+            case .success(let list):
+                self.dataList = self.refactor(ArtcleList: list)
+            case .failure(let error):
+                self.dataList = [ChosenList]()
+                let list = ChosenList()
+                switch error.type {
+                case .unreachable:
+                    list.cellLayout = .unreachable
+                default:
+                    list.cellLayout = .apiStatus
+                }
+                self.dataList?.append(list)
+            }
+            self.closeLoadingMsg()
+            self.tableView?.reloadData()
+            self.tableView?.mj_header?.endRefreshing()
+        }
     }
     
-    func setLoadMore() {
-        self.footer = MJRefreshBackGifFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreRefresh))
-        self.footer.backgroundColor = UIColor.backgroundColor
-        self.footer.isHidden = true
-        self.footer.setTitle(LOAD_MORE, for: .idle)
-        self.footer.setTitle(RELEASE_TO_LOAD, for: .pulling)
-        self.footer.setTitle(LOADING, for: .refreshing)
-        self.perform(#selector(showFooter), with: nil, afterDelay: 1.0)
-        self.tableView?.mj_footer = self.footer
-    }
     
-    @objc func loadMoreRefresh() {
-        guard viewModel.nextPage != "" else {
-            self.tableView?.mj_footer?.endRefreshing()
-            return
+    func refactor(ArtcleList:[ArticleList]?) -> [ChosenList] {
+        
+        guard let list = ArtcleList else {
+            return [ChosenList]()
+        }
+       
+        var count = [ChosenList]()
+        var arr = [ChosenList]()
+        for data in list {
+            switch data.type {
+            case "news":
+                guard let newsData = data.newsData  else {
+                    return [ChosenList]()
+                }
+                let chosenlist = ChosenList()
+                chosenlist.cellLayout = .artcleList
+                chosenlist.artcleItem = newsData
+                arr.append(chosenlist)
+                count.append(chosenlist)
+            
+            case "rotate":
+                guard let rotateListItem = data.rotateData  else {
+                    return [ChosenList]()
+                }
+                let chosenlist = ChosenList()
+                chosenlist.cellLayout = .rotate
+                chosenlist.artcleListRotateList = rotateListItem
+                self.rotateList = rotateListItem
+                arr.append(chosenlist)
+                count.append(chosenlist)
+                
+            case "nextPage":
+                if let nextPageArr = data.nextPageData {
+                    for nextPage in nextPageArr {
+                        let page = nextPage.nextPage
+                        self.nextPage = page
+                        if page == "" {
+                            let list = ChosenList()
+                            list.cellLayout = .noMoreData
+                            arr.append(list)
+                        }
+                    }
+                }
+            default: break
+            }
         }
         
-        viewModel.dataFetch(viewModel.nextPage, .loadMore)
+        //判斷資料是否為沒數量
+        ///empty
+        if count.count == 0 {
+            let chosenlist = ChosenList()
+            chosenlist.cellLayout = .empty
+            arr.append(chosenlist)
+            return arr
+        }
+        
+        return arr
     }
     
-    @objc func showFooter() {
-        self.footer.isHidden = false
+    func setLoadingMsg(){
+        self.loadingText = UILabel.init(frame:  CGRect(x: CGFloat(SCREEN_WIDTH/2) - 50, y: (CGFloat(SCREEN_HEIGHT - STATUS_HEIGHT - TABBAR_HEIGHT)/2) - 25, width: 100, height:50))
+        self.loadingText?.text = LOADING
+        self.loadingText?.textColor = UIColor.selectColor
+        self.loadingText?.textAlignment = .center
+        if let loading = self.loadingText {
+            self.view.addSubview(loading)
+        }
     }
     
-    func addNotification() {
-//        weak var weakSelf = self
-//        NOTIFICATION_CENTER.addObserver(forName: Notification.Name("fontChanged"), object: nil, queue: nil) { (notification) in
-//            weakSelf?.tableView?.reloadData()
-//        }
-//        NOTIFICATION_CENTER.addObserver(forName: Notification.Name("reloadKeepUI"), object: nil, queue: nil) { (notification) in
-//
-//            guard let userInfo = notification.userInfo else {
-//                return
-//            }
-//            if let viewController = userInfo["fromVC"] as? UIViewController {
-//                if !viewController.isEqual(weakSelf) {
-//                    weakSelf?.tableView?.reloadData()
-//                }
-//            }
-//        }
+    func closeLoadingMsg(){
+        if self.loadingText != nil {
+            self.loadingText?.removeFromSuperview()
+        }
     }
     
-    func removeNotification() {
-        PushVM.shared.removeNotifications()
-//        NOTIFICATION_CENTER.removeObserver(self, name: Notification.Name("fontChanged"), object: nil)
-//        NOTIFICATION_CENTER.removeObserver(self, name: Notification.Name("reloadKeepUI"), object: nil)
-    }
 }
 
-extension SportsIndexVC: UITableViewDataSource {
+extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO Oscar check MVVM
-        return viewModel.numberOfCells
+        return dataList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        weak var weakSelf = self
-        let cellVM = viewModel.getCellViewModel(at: indexPath)
-        switch cellVM.cellLayout {
-        case .headline:
-            guard let headlineData = cellVM.headlineData else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: videoIndexHeadLineCell, for: indexPath) as! VideoIndexHeadLineCell
-            cell.delegate = weakSelf
-            cell.configureWithData(headlineData)
-            return cell
-        case .live:
-            guard let liveData = cellVM.live else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: newsCell, for: indexPath) as! ArticleListVCViewCell
-            cell.fromVC = weakSelf
-            cell.configureWithLiveData(liveData)
-            cell.selectionStyle = .none
-            return cell
-        case .category:
-            guard let categoryData = cellVM.categoryData else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: videoIndexCategoryCell, for: indexPath) as! VideoIndexCategoryCell
-            cell.delegate = weakSelf
-            cell.configureWithData(categoryData)
-            return cell
-        case .picture:
-            guard let pictureData = cellVM.pictureData else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: videoIndexPictureCell, for: indexPath) as! VideoIndexPictureCell
-            cell.delegate = weakSelf
-            cell.configureWithData(pictureData)
-            return cell
-        case .video:
-            guard let videoData = cellVM.video else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: videoCell, for: indexPath) as! VideoCell
-            cell.fromVC = weakSelf
-            cell.configureWithData(videoData)
-            cell.selectionStyle = .none
-            return cell
-        case .news:
-            guard let newsData = cellVM.news else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: newsCell, for: indexPath) as! ArticleListVCViewCell
-            cell.fromVC = weakSelf
-            cell.configureWithData(newsData)
-            cell.selectionStyle = .none
-            return cell
-        case .apiStatus:
-            guard let statusData = cellVM.apiStatusData else { return UITableViewCell() }
-            let cell = tableView.dequeueReusableCell(withIdentifier: apiStatusCell, for: indexPath) as! ApiStatusCell
-            cell.delegate = weakSelf
-            cell.configureWithData(statusData)
-            return cell
-        default:
+
+        guard  let data = self.dataList?[indexPath.row] else {
             return UITableViewCell()
         }
-    }
-}
-
-extension SportsIndexVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellVM = viewModel.getCellViewModel(at: indexPath)
-        switch cellVM.cellLayout {
-        case .headline:
-            return UITableView.automaticDimension
-        case .category:
-            return 150
-        case .picture:
-            ///tableviewcell 上下間距4 所以加8
-            return 208
-        case .video:
-            return UITableView.automaticDimension
-        case .live, .news:
-            return UITableView.automaticDimension
-        case .apiStatus:
-            return tableView.frame.size.height
-        default:
-            return 0
+        switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: stcarouselcell, for: indexPath) as! STCarouselCell
+                cell.selectionStyle = .none
+                cell.configureWithData(data.artcleListRotateList)
+                cell.stCarouselView.delegate = self
+                cell.selectionStyle = .none
+                return cell
+//            case 1:
+//            case 2:
+//            case 3:
+            default:
+                return UITableViewCell()
         }
-
-    }
         
+//        switch data.cellLayout {
+//        case .rotate :
+//            let cell = tableView.dequeueReusableCell(withIdentifier: stcarouselcell, for: indexPath) as! STCarouselCell
+//            cell.selectionStyle = .none
+//            cell.configureWithData(data.artcleListRotateList)
+//            cell.stCarouselView.delegate = self
+//            cell.selectionStyle = .none
+//            return cell
+//        case .artcleList :
+//            let cell = tableView.dequeueReusableCell(withIdentifier: ArticleListCell) as! ArticleListVCViewCell
+//            cell.isHiddenPlayicon = true
+//            cell.configureWithData(data.artcleItem)
+//            cell.selectionStyle = .none
+//            return cell
+//        case .apiStatus :
+//            let cell = tableView.dequeueReusableCell(withIdentifier: apistatusCell, for: indexPath) as! ApiStatusCell
+//            cell.delegate = self
+//            cell.configureWithData(data.apiStatus)
+//            return cell
+//        case .empty :
+//            let cell = tableView.dequeueReusableCell(withIdentifier: apistatusCell, for: indexPath) as! ApiStatusCell
+//            cell.delegate = self
+//            cell.configureWithData(.empty)
+//            return cell
+//        default:
+//            return UITableViewCell()
+//        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let cellVM = viewModel.getCellViewModel(at: indexPath)
-        switch cellVM.cellLayout {
-        case .live:
-            guard let live = cellVM.live, let videoID = live.videoID else { return }
-            let cell = tableView.cellForRow(at: indexPath) as! ArticleListVCViewCell
-            if videoID != "" && live.isLive {
-                US.setAnalyticsLogEnvent(event: FaEvent.click_video.rawValue, action: "index_live", label: "\(videoID)_影片_直播_首頁")
-                self.readyToPlay(videoID, cell.ImageView)
-            }
-        case .video:
-            guard let video = cellVM.video, let videoID = video.videoID else { return }
-            guard let cell = tableView.cellForRow(at: indexPath) as? VideoCell else { return }
-            if videoID != "" {
-                US.setAnalyticsLogEnvent(event: FaEvent.click_video.rawValue, action: "index_video", label: "\(videoID)_影片_首頁")
-                self.readyToPlay(videoID, cell.mainIV)
-            }
-        case .news:
-            guard let news = cellVM.news, let apiUrl = news.api_url, let title = news.title, let id = news.news_id, let name = news.name else { return }
-            US.setAnalyticsLogEnvent(event: FaEvent.click_article.rawValue, action: "index_article", label: "\(title)_\(id)_文章_首頁")
-            let vc = ContentVC(apiUrl, name)
-            self.navigationController?.pushViewController(vc, animated: true)
-        default:
-            break
-        }
+//        guard let apiUrl = dataList?[safe:indexPath.row]?.artcleItem?.api_url, let title = dataList?[safe:indexPath.row]?.artcleItem?.title, let newsID = dataList?[safe:indexPath.row]?.artcleItem?.news_id, let category = dataList?[safe:indexPath.row]?.artcleItem?.enName, let categoryCh = dataList?[safe:indexPath.row]?.artcleItem?.name else {
+//            return
+//        }
+//        let faEvent  = FaEvent.click_article.rawValue
+//        let faAction = "world_article"
+//        let faLabel = "\(title)_\(newsID)_文章_全球文章列表"
+//        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
+//
+//        let vc = ContentVC(apiUrl,categoryCh)
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
-//MARK: ApiStatusCellDelegate
-extension SportsIndexVC: ApiStatusCellDelegate {
+extension SportsIndexVC : ApiStatusCellDelegate {
     func reloadLblClick() {
-        viewModel.dataFetch()
+        self.queryData()
     }
 }
 
-//MARK: VideoIndexHeadLineCellDelegate
-extension SportsIndexVC: VideoIndexHeadLineCellDelegate {
-    func clickHeadlineCell(_ data: VideoIndexData,_ index: Int, _ cell: ColHeadLineCell){
-        guard let videoID = data.videoID else { return }
-        DDLogInfo("⭐️videoID:\(videoID)")
-        if videoID != "" {
-            US.setAnalyticsLogEnvent(event: "click_video", action: "index_headline_video", label: "\(videoID)_\(index)_頭條_首頁")
-            self.readyToPlay(videoID, cell.mainIV)
-        } else {
-            handHeadlineArticle(data, index)
-        }
-    }
-    
-    // MARK: APP-818 [iOS]加入外開功能
-    fileprivate func handHeadlineArticle(_ data: VideoIndexData, _ index: Int) {
-        guard let apiUrl = data.apiUrl, let newsID = data.newsID, let title = data.title, let name = data.name else { return }
-        DDLogInfo("⭐️apiUrl:\(apiUrl)")
-        US.setAnalyticsLogEnvent(event: "click_article", action: "index_headline_article", label: "\(title)_\(newsID)_\(index)_頭條_首頁")
-           
-        switch data.openType {
-        case .browser:
-            openBrowser(apiUrl)
-        case .inAppBrowser:
-            let webVC = WebVC(apiUrl)
-            self.navigationController?.pushViewController(webVC, animated: true)
-        case .native, .none:
-            let vc = ContentVC(apiUrl,name)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-
-}
-
-//MARK: VideoIndexCategoryCellDelegate
-extension SportsIndexVC: VideoIndexCategoryCellDelegate {
-    func clickCategoryCell(_ data: CategoryData, _ index: Int) {
-        //DDLogInfo("⭐️data.title:\(data.title ?? "")")
-        guard let topVC = UIApplication.topViewController() else { return DDLogError("topVC is nil.") }
-        
-        let sb = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-        let listVC = sb.instantiateViewController(withIdentifier: "listVC") as! ListVC
-        
-        if let title = data.title {
-            let category_name = data.category_name ?? ""
-            US.setAnalyticsLogEnvent(event: "click_cate", action: "index_\(category_name)", label: "\(title)_首頁")
-        }
-        listVC.moveIndex = index
-        listVC.moveToSpecificPage()
-        topVC.show(listVC, sender: nil)
-        
-    }
-}
-
-// MARK: OpenUrlLayer
-extension SportsIndexVC: OpenBrowserUrlLayer {}
-
-
-//MARK: VideoIndexPictureCellDelegate
-extension SportsIndexVC: VideoIndexPictureCellDelegate {
-    func clickPictureCell(_ data: PictureList, _ index: Int) {
-        guard let topVC = UIApplication.topViewController() else {
-            DDLogError("topVC is nil.")
+extension SportsIndexVC:LLCycleScrollViewDelegate {
+    func cycleScrollView(_ cycleScrollView: LLCycleScrollView, didSelectItemIndex index: NSInteger) {
+        guard let apiUrl = rotateList?[safe:index]?.api_url, let title = rotateList?[safe:index]?.title, let newsID = rotateList?[safe:index]?.news_id, let category = rotateList?[safe:index]?.enName, let categoryCh = rotateList?[safe:index]?.name else {
             return
         }
-        
-        guard let pictureContentVC = MAINSB.instantiateViewController(withIdentifier: "pictureContentVC") as? PictureContentVC else {
-            DDLogError("pictureContentVC is nil.")
-            return
-        }
-        
-        pictureContentVC.hidesBottomBarWhenPushed = true
-        pictureContentVC.picture = data
-        topVC.show(pictureContentVC, sender: nil)
-        
-        let pictureId = data.pictureId ?? 0
-        let title = data.name ?? ""
-        US.setAnalyticsLogEnvent(event: "click_img", action: "index_img_content", label: "\(title)_\(pictureId)_圖輯_首頁")
-    }
-    
-    func clickPictureEndcell() {
-        SM.tabbarController?.selectedIndex = 2
-        US.setAnalyticsLogEnvent(event: "click_img", action: "index_img_more", label: "圖輯_看更多_首頁")
+        let faEvent  = FaEvent.click_article.rawValue
+        let faAction = "world_article_headline"
+        let faLabel = "\(title)_\(newsID)_頭條_全球文章列表"
+        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
+        let vc = ContentVC(apiUrl,categoryCh)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

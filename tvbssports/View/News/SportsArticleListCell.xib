@@ -24,8 +24,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-E7-Kw6" userLabel="Contain View">
                                 <rect key="frame" x="0.0" y="0.0" width="454" height="134.66666666666666"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-XA-OrC" userLabel="mainIV">
-                                        <rect key="frame" x="240" y="10" width="203.66666666666666" height="114.66666666666669"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_3" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-XA-OrC" userLabel="mainIV">
+                                        <rect key="frame" x="240" y="10.000000000000007" width="203.66666666666663" height="114.66666666666669"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bVO-XA-OrC" secondAttribute="height" multiplier="16:9" id="C5f-jY-6cx"/>
                                         </constraints>
@@ -101,7 +101,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img_default" width="428" height="241"/>
+        <image name="default_3" width="414" height="233"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

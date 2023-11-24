@@ -233,6 +233,10 @@
 		554ABEAD2B0C86FA003FB3FE /* SportsNewsCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ABEAB2B0C86FA003FB3FE /* SportsNewsCarouselCell.swift */; };
 		554ABEAF2B0C8704003FB3FE /* SportsNewsCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554ABEAE2B0C8704003FB3FE /* SportsNewsCarouselCell.xib */; };
 		554ABEB02B0C8704003FB3FE /* SportsNewsCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554ABEAE2B0C8704003FB3FE /* SportsNewsCarouselCell.xib */; };
+		554ABEB22B0DD89F003FB3FE /* SportsIndexM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ABEB12B0DD89F003FB3FE /* SportsIndexM.swift */; };
+		554ABEB32B0DD89F003FB3FE /* SportsIndexM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ABEB12B0DD89F003FB3FE /* SportsIndexM.swift */; };
+		554ABEB52B0F040A003FB3FE /* MemberBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ABEB42B0F040A003FB3FE /* MemberBarItem.swift */; };
+		554ABEB62B0F040A003FB3FE /* MemberBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ABEB42B0F040A003FB3FE /* MemberBarItem.swift */; };
 		5551761326943219004BFBBF /* ExtraHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551761226943219004BFBBF /* ExtraHeaderCell.swift */; };
 		5551761426943219004BFBBF /* ExtraHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551761226943219004BFBBF /* ExtraHeaderCell.swift */; };
 		5551761A2694322B004BFBBF /* ExtraHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555176192694322B004BFBBF /* ExtraHeaderCell.xib */; };
@@ -530,6 +534,8 @@
 		554ABEA82B0C80A1003FB3FE /* SportsIndexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsIndexVC.swift; sourceTree = "<group>"; };
 		554ABEAB2B0C86FA003FB3FE /* SportsNewsCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsNewsCarouselCell.swift; sourceTree = "<group>"; };
 		554ABEAE2B0C8704003FB3FE /* SportsNewsCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportsNewsCarouselCell.xib; sourceTree = "<group>"; };
+		554ABEB12B0DD89F003FB3FE /* SportsIndexM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsIndexM.swift; sourceTree = "<group>"; };
+		554ABEB42B0F040A003FB3FE /* MemberBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberBarItem.swift; sourceTree = "<group>"; };
 		5551761226943219004BFBBF /* ExtraHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraHeaderCell.swift; sourceTree = "<group>"; };
 		555176192694322B004BFBBF /* ExtraHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtraHeaderCell.xib; sourceTree = "<group>"; };
 		55DF83F42B0B39320027E514 /* PredictRotateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictRotateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -847,6 +853,7 @@
 				EFD61C0528056A63008BEBC4 /* SingleVideoItemM.swift */,
 				2C9DEDDD28618F6800875FFA /* MarqueeM.swift */,
 				120D6E282861CF6500D40F5D /* PictureListM.swift */,
+				554ABEB12B0DD89F003FB3FE /* SportsIndexM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -859,6 +866,7 @@
 				BC4E78352599814F0029E553 /* ShadowView.swift */,
 				3558538C2592EB7200937650 /* LogoNI.swift */,
 				35ECB59E25DD0A9A0064A4AE /* SettingBI.swift */,
+				554ABEB42B0F040A003FB3FE /* MemberBarItem.swift */,
 				1286552F26959C6E0084B021 /* GradientView.swift */,
 				2CB2970327B2103B00B257B5 /* ArticleLoadingView.swift */,
 				EFD61BE72804FEBE008BEBC4 /* VideoContentView.swift */,
@@ -1663,6 +1671,7 @@
 				2C19B4BF2862E1C300170EBB /* VideoIndexPictureCell.swift in Sources */,
 				120D6E292861CF6500D40F5D /* PictureListM.swift in Sources */,
 				2C485CF12854BF9E00EA940E /* SKPhoto.swift in Sources */,
+				554ABEB22B0DD89F003FB3FE /* SportsIndexM.swift in Sources */,
 				951D6DCA277C09A900C5C5DA /* BaseVC.swift in Sources */,
 				554ABEA92B0C80A1003FB3FE /* SportsIndexVC.swift in Sources */,
 				BCA87C2727ED680B003FAC84 /* SocialKit.swift in Sources */,
@@ -1671,6 +1680,7 @@
 				BC4E783D2599E1BA0029E553 /* VideoListM.swift in Sources */,
 				355853A72592EBA300937650 /* FavoriteVC.swift in Sources */,
 				355853952592EB8A00937650 /* MenuM.swift in Sources */,
+				554ABEB52B0F040A003FB3FE /* MemberBarItem.swift in Sources */,
 				2C485CD52854BF9E00EA940E /* SKPaginationView.swift in Sources */,
 				2C5E9D602762057900CE790F /* VideoIndexHeadLineCell.swift in Sources */,
 				55DF840D2B0B42660027E514 /* MyRecordCell.swift in Sources */,
@@ -1821,6 +1831,7 @@
 				2C19B4C02862E1C300170EBB /* VideoIndexPictureCell.swift in Sources */,
 				120D6E2A2861CF6500D40F5D /* PictureListM.swift in Sources */,
 				2C485CF22854BF9E00EA940E /* SKPhoto.swift in Sources */,
+				554ABEB32B0DD89F003FB3FE /* SportsIndexM.swift in Sources */,
 				BCA87C2827ED680B003FAC84 /* SocialKit.swift in Sources */,
 				554ABEAA2B0C80A1003FB3FE /* SportsIndexVC.swift in Sources */,
 				9544987C275A11F10043DF66 /* HeadlineNewsSmallCell.swift in Sources */,
@@ -1829,6 +1840,7 @@
 				35BB2F71259C269E009DF376 /* FavoriteVC.swift in Sources */,
 				35BB2F72259C269E009DF376 /* MenuM.swift in Sources */,
 				2C5E9D612762057900CE790F /* VideoIndexHeadLineCell.swift in Sources */,
+				554ABEB62B0F040A003FB3FE /* MemberBarItem.swift in Sources */,
 				2C485CD62854BF9E00EA940E /* SKPaginationView.swift in Sources */,
 				BC7E458C26A168190071EFE7 /* SContentCell.swift in Sources */,
 				55DF840E2B0B42660027E514 /* MyRecordCell.swift in Sources */,

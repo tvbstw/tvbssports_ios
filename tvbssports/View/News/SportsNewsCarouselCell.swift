@@ -8,13 +8,14 @@
 
 
 import UIKit
+import FSPagerView
 
 class SportsNewsCarouselCell: UITableViewCell {
     @IBOutlet weak var stCarouselView: LLCycleScrollView!
     
     var imageArr = [String]()
     var titleArr = [String]()
-//    let fsPageControl = FSPageControl()
+    let fsPageControl = FSPageControl()
     override func awakeFromNib() {
         super.awakeFromNib()
         self.addNotification()
@@ -44,7 +45,7 @@ class SportsNewsCarouselCell: UITableViewCell {
         self.stCarouselView.placeHolderImage = UIImage(named: "default")
         self.stCarouselView.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         self.stCarouselView.pageControl?.isHidden = true
-//        createPageControll()
+        createPageControll()
   
         self.stCarouselView.numberOfLines = 2
         self.stCarouselView.titleLeading = 8.0
@@ -61,29 +62,28 @@ class SportsNewsCarouselCell: UITableViewCell {
     }
     
  
-//TODO Oscar
-//        fileprivate func createPageControll() {
-//            fsPageControl.frame =  CGRect(x: 0, y: 0, width: stCarouselView.frame.width, height: 30)
-//            self.addSubview(fsPageControl)
-////            fsPageControl.backgroundColor = .black
-//            fsPageControl.numberOfPages = self.imageArr.count
-////            fsPageControl.contentHorizontalAlignment = .center
-//            fsPageControl.itemSpacing = 30
-////            fsPageControl.contentInsets = UIEdgeInsets(top: 0, left:50 , bottom: 0, right: 50)
-//            fsPageControl.hidesForSinglePage = true
-//            fsPageControl.setImage(UIImage(named:"bar_normal"), for: UIControl.State.normal)
-//            fsPageControl.setImage(UIImage(named:"bar_selected"), for: UIControl.State.selected)
-//            fsPageControl.snp.makeConstraints { (make) in
-//                make.centerX.equalToSuperview()
-//                let top = self.stCarouselView.frame.height * 0.065
-//                make.top.equalTo(self.stCarouselView.snp.bottom).offset(-top)
-//                make.width.equalToSuperview()
-//                make.height.equalTo(30)
-//            }
-//
-//            fsPageControl.currentPage = 0
-//            //self.stCarouselView.fsPageControl = fsPageControl
-//        }
+    fileprivate func createPageControll() {
+        fsPageControl.frame =  CGRect(x: 0, y: 0, width: stCarouselView.frame.width, height: 30)
+        self.addSubview(fsPageControl)
+//            fsPageControl.backgroundColor = .black
+        fsPageControl.numberOfPages = self.imageArr.count
+//            fsPageControl.contentHorizontalAlignment = .center
+        fsPageControl.itemSpacing = 30
+//            fsPageControl.contentInsets = UIEdgeInsets(top: 0, left:50 , bottom: 0, right: 50)
+        fsPageControl.hidesForSinglePage = true
+        fsPageControl.setImage(UIImage(named:"bar_normal"), for: UIControl.State.normal)
+        fsPageControl.setImage(UIImage(named:"bar_selected"), for: UIControl.State.selected)
+        fsPageControl.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            let top = self.stCarouselView.frame.height * 0.065
+            make.top.equalTo(self.stCarouselView.snp.bottom).offset(-top)
+            make.width.equalToSuperview()
+            make.height.equalTo(30)
+        }
+
+        fsPageControl.currentPage = 0
+        //self.stCarouselView.fsPageControl = fsPageControl
+    }
 }
 
  
