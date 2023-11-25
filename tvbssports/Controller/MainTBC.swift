@@ -25,7 +25,7 @@ class MainTBC: UITabBarController {
     
     func setAppearence() {
         UITabBar.appearance().barTintColor = UIColor.backgroundColor
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.textColor], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.unSelectColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.selectColor], for: .selected)
     }
     

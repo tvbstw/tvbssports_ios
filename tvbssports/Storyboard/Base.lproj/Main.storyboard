@@ -567,7 +567,7 @@
         <scene sceneID="ZbZ-Da-TIR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NCU-kf-kW6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="即時新聞" id="O1c-gW-VyU"/>
+                    <tabBarItem key="tabBarItem" title="即時新聞" image="tabbarNews_Y" selectedImage="tabbarNews_Y" id="O1c-gW-VyU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1Eg-V8-u1n">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -618,7 +618,7 @@
         <scene sceneID="jdX-lt-dTj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ekf-bW-iGH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="賽事" id="InG-W7-xvv"/>
+                    <tabBarItem key="tabBarItem" title="賽事" image="tabbarEvent_N" selectedImage="tabbarEvent_N" id="InG-W7-xvv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0WT-IW-hpX">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -637,7 +637,7 @@
         <scene sceneID="HIx-No-ztH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXP-dg-4Qe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="排行榜" id="fWc-gc-zD9"/>
+                    <tabBarItem key="tabBarItem" title="排行榜" image="tabbarRanking_N" selectedImage="tabbarRanking_N" id="fWc-gc-zD9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jNd-vM-caQ">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -660,6 +660,9 @@
     </designables>
     <resources>
         <image name="splash" width="390" height="844"/>
+        <image name="tabbarEvent_N" width="31" height="28"/>
+        <image name="tabbarNews_Y" width="31" height="28"/>
+        <image name="tabbarRanking_N" width="31" height="28"/>
         <image name="tabbars_article_blue" width="26" height="26"/>
         <image name="tabbars_article_white" width="26" height="26"/>
         <image name="tabbars_keep_blue" width="26" height="26"/>

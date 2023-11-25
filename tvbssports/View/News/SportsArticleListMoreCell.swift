@@ -12,9 +12,14 @@ import UIKit
 class SportsArticleListMoreCell: UITableViewCell {
 
     @IBOutlet weak var titleLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configureWithData(title:String){
+        self.titleLbl.text = title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

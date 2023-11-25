@@ -20,11 +20,8 @@ class SportsIndexVC: UIViewController {
     fileprivate let sportsNewsCarouselCell = "sportsNewsCarouselCell"
     fileprivate let sportsArticleListMoreCell = "sportsArticleListMoreCell"
     fileprivate let sportsArticleListCell = "sportsArticleListCell"
-    
-    fileprivate let stcarouselcell  = "stcarouselcell"
-    fileprivate let noMoreDataCell  = "noMoreDataCell"
-    fileprivate let SearchEmptyCell = "SearchEmptyCell"
-    fileprivate let ArticleListCell = "ArticleListCell"
+    fileprivate let aDBigCardCell = "aDBigCardCell"
+    fileprivate let aDBannerCell = "aDBannerCell"
     fileprivate let apistatusCell   = "apistatusCell"
     
     fileprivate var tableView:UITableView?
@@ -70,9 +67,6 @@ class SportsIndexVC: UIViewController {
     
     func initView() {
         self.navigationItem.hidesBackButton = true
-        let btn = UIButton.customBtnForBarButtonItem("left", "", "icon_back")
-        btn.addTarget(self, action: #selector(customBackItemClick), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         let settingBI = MemberBarItem()
         self.navigationItem.rightBarButtonItem = settingBI
         self.navigationController?.navigationBar.titleTextAttributes =  [NSAttributedString.Key.foregroundColor:UIColor.textColor,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 19.0, weight: .medium)]
@@ -96,16 +90,6 @@ class SportsIndexVC: UIViewController {
         }
         
     }
-    
-//    func setupNotchBackground() {
-//        if #available(iOS 11.0, *) {
-//            let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-//            let notchView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: statusBarHeight))
-//            notchView.backgroundColor = UIColor.red // 這裡的顏色可以替換為你想要的任何顏色
-//
-//            view.addSubview(notchView)
-//        }
-//    }
 
     @objc func customBackItemClick() {
         self.navigationController?.popViewController(animated: true)
@@ -118,7 +102,7 @@ class SportsIndexVC: UIViewController {
         self.tableView?.separatorStyle = .none
         self.tableView?.tableFooterView = UIView(frame: .zero)
         self.tableView?.showsVerticalScrollIndicator = false
-        self.tableView?.backgroundColor = UIColor.backgroundColor
+        self.tableView?.backgroundColor = UIColor.tableBackgroundColor
         
         if #available(iOS 11.0, *) {
             self.tableView?.contentInsetAdjustmentBehavior = .never
@@ -137,7 +121,9 @@ class SportsIndexVC: UIViewController {
         self.tableView?.register(UINib(nibName: "MyRecordCell", bundle: nil), forCellReuseIdentifier: myRecordCell)
         self.tableView?.register(UINib(nibName: "SportsNewsCarouselCell", bundle: nil), forCellReuseIdentifier: sportsNewsCarouselCell)
         self.tableView?.register(UINib(nibName: "SportsArticleListMoreCell", bundle: nil), forCellReuseIdentifier: sportsArticleListMoreCell)
-        self.tableView?.register(UINib(nibName: "sportsArticleListCell", bundle: nil), forCellReuseIdentifier: sportsArticleListCell)
+        self.tableView?.register(UINib(nibName: "SportsArticleListCell", bundle: nil), forCellReuseIdentifier: sportsArticleListCell)
+        self.tableView?.register(UINib(nibName: "ADBigCardCell", bundle: nil), forCellReuseIdentifier: aDBigCardCell)
+        self.tableView?.register(UINib(nibName: "ADBannerCell", bundle: nil), forCellReuseIdentifier: aDBannerCell)
         self.tableView?.register(UINib(nibName: "ApiStatusCell", bundle: nil), forCellReuseIdentifier: apistatusCell)
     }
     
@@ -262,7 +248,7 @@ class SportsIndexVC: UIViewController {
 
 extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 16
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -287,7 +273,36 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: myRecordCell, for: indexPath) as! MyRecordCell
             cell.selectionStyle = .none
             return cell
-
+        //TODO 熱門新聞
+//        case 4:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: sportsNewsCarouselCell, for: indexPath) as! SportsNewsCarouselCell
+//            cell.configureWithData()
+////            cell.stCarouselView.delegate = self
+//            cell.selectionStyle = .none
+//            return cell
+        //TOAD 廣告
+//        case 4:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "aDBigCardCell", for: indexPath) as! ADBigCardCell
+//            return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
+            cell.selectionStyle = .none
+            cell.configureWithData(title: "NBA")
+            return cell
+        case 5,6,7,8,9:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
+            cell.selectionStyle = .none
+            return cell
+        case 10:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
+            cell.selectionStyle = .none
+            cell.configureWithData(title: "MLB")
+            return cell
+        case 11,12,13,14,15:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
+            cell.selectionStyle = .none
+            return cell
+            
         default:
             return UITableViewCell()
         }

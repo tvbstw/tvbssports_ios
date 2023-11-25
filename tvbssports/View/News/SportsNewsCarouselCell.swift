@@ -27,13 +27,29 @@ class SportsNewsCarouselCell: UITableViewCell {
         }
     }
     
-    func configureWithData(_ data: [ChosenList]) {
+//    func configureWithData(_ data: [ChosenList]) {
+//        self.imageArr = [String]()
+//        self.titleArr = [String]()
+//        for list in data {
+//            self.imageArr.append(list.image)
+//            self.titleArr.append(list.title)
+//        }
+//        self.setCarouseView()
+//    }
+    
+    func configureWithData() {
         self.imageArr = [String]()
         self.titleArr = [String]()
-        for list in data {
-            self.imageArr.append(list.image)
-            self.titleArr.append(list.title)
-        }
+        self.imageArr.append("https://cc.tvbs.com.tw/img/upload/2021/12/21/20211221081425-af1865e5.jpg")
+        self.titleArr.append("新聞第一")
+        self.imageArr.append("https://cc.tvbs.com.tw/img/upload/2023/03/05/20230305123442-e8a1c487.jpg")
+        self.titleArr.append("新聞第二")
+        self.imageArr.append("https://cc.tvbs.com.tw/img/upload/2023/02/06/20230206182949-daec4719.jpg")
+        self.titleArr.append("新聞第三")
+        self.imageArr.append("https://cc.tvbs.com.tw/img/upload/2022/09/22/20220922090647-30004e00.jpg")
+        self.titleArr.append("新聞第四")
+        self.imageArr.append("https://cc.tvbs.com.tw/img/upload/2021/07/21/20210721172742-d748c1c0.jpg")
+        self.titleArr.append("新聞第五")
         self.setCarouseView()
     }
     
@@ -82,7 +98,7 @@ class SportsNewsCarouselCell: UITableViewCell {
         }
 
         fsPageControl.currentPage = 0
-        //self.stCarouselView.fsPageControl = fsPageControl
+//        self.stCarouselView.fsPageControl = fsPageControl
     }
 }
 
