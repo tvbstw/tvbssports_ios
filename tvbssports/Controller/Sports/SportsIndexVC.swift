@@ -307,6 +307,25 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 5, 11:
+            if let sportsCell = cell as? SportsArticleListMoreCell {
+                sportsCell.selectionStyle = .none
+                sportsCell.configureCellView()
+            }
+            
+        case 10, 16:
+            if let sportsCell = cell as? SportsArticleListCell {
+                sportsCell.selectionStyle = .none
+                sportsCell.configureCellView(isCornerRadius: true)
+            }
+        default:
+            break
+        }
+    }
+
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

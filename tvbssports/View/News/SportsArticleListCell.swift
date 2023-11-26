@@ -29,6 +29,19 @@ class SportsArticleListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configureCellView(isCornerRadius:Bool = false) {
+        let cornerRadius: CGFloat = isCornerRadius ? 8.0 : 0.0
+        let maskPath = UIBezierPath(
+            roundedRect: cellView.bounds,
+            byRoundingCorners: [.bottomLeft, .bottomRight],
+            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)
+        )
+
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        cellView.layer.mask = maskLayer
+    }
+    
 }
 
 

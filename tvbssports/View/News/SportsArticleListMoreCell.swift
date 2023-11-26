@@ -19,10 +19,8 @@ class SportsArticleListMoreCell: UITableViewCell {
         // Initialization code
     }
     
-    //TODO check 跑版
     override func layoutSubviews() {
         super.layoutSubviews()
-        configureCellView()
     }
     
     func configureWithData(title:String){
@@ -35,7 +33,7 @@ class SportsArticleListMoreCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func configureCellView() {
+    func configureCellView() {
         // 设置左上角和右上角为圆角
         let cornerRadius: CGFloat = 8.0 // 您可以根据需要调整圆角的半径
         let maskPath = UIBezierPath(
