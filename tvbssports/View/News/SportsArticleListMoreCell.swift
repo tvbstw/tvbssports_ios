@@ -12,10 +12,12 @@ import UIKit
 class SportsArticleListMoreCell: UITableViewCell {
 
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        configureCellView()
     }
     
     func configureWithData(title:String){
@@ -26,6 +28,20 @@ class SportsArticleListMoreCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func configureCellView() {
+        // 设置左上角和右上角为圆角
+        let cornerRadius: CGFloat = 8.0 // 您可以根据需要调整圆角的半径
+        let maskPath = UIBezierPath(
+            roundedRect: cellView.bounds,
+            byRoundingCorners: [.topLeft, .topRight],
+            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)
+        )
+
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        cellView.layer.mask = maskLayer
     }
     
 }

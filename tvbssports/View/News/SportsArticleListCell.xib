@@ -4,109 +4,76 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sportsArticleListCell" rowHeight="160" id="nyX-Z7-LKn" customClass="SportsArticleListCell" customModule="tvbssports" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="474" height="153"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sportsArticleListCell" rowHeight="351" id="iUx-M9-3wb" customClass="SportsArticleListCell" customModule="tvbssports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nyX-Z7-LKn" id="biA-1b-qOU">
-                <rect key="frame" x="0.0" y="0.0" width="474" height="153"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iUx-M9-3wb" id="NZx-ir-SUQ">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="131"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIV-Lh-CRT" userLabel="ShadowView" customClass="ShadowView" customModule="tvbssports" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="454" height="134.66666666666666"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-E7-Kw6" userLabel="Contain View">
-                                <rect key="frame" x="0.0" y="0.0" width="454" height="134.66666666666666"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_3" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-XA-OrC" userLabel="mainIV">
-                                        <rect key="frame" x="240" y="10.000000000000007" width="203.66666666666663" height="114.66666666666669"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="bVO-XA-OrC" secondAttribute="height" multiplier="16:9" id="C5f-jY-6cx"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NBA／「哈登人生」變骨牌？美媒曝76人新煩惱：恩比德恐跟進" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNB-ka-TwF">
-                                        <rect key="frame" x="0.0" y="9" width="232" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-Hy-ih6">
-                                        <rect key="frame" x="10" y="133.66666666666666" width="434" height="1"/>
-                                        <color key="backgroundColor" name="VideoTimeColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="YC4-l6-jro"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023/08/23 15:27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc7-Tw-Vtz">
-                                        <rect key="frame" x="0.0" y="107.66666666666667" width="116" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="TN7-vR-Nyb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" name="VideoTimeColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="BackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="bVO-XA-OrC" firstAttribute="leading" secondItem="CNB-ka-TwF" secondAttribute="trailing" constant="8" symbolic="YES" id="09z-9U-irp"/>
-                                    <constraint firstItem="CNB-ka-TwF" firstAttribute="top" secondItem="4ip-E7-Kw6" secondAttribute="top" constant="9" id="0Qe-kl-oVp"/>
-                                    <constraint firstItem="3fY-Hy-ih6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bVO-XA-OrC" secondAttribute="bottom" priority="900" constant="9" id="0eu-Yw-2zz"/>
-                                    <constraint firstItem="3fY-Hy-ih6" firstAttribute="top" secondItem="bc7-Tw-Vtz" secondAttribute="bottom" constant="9" id="6cE-7f-qdk"/>
-                                    <constraint firstItem="3fY-Hy-ih6" firstAttribute="trailing" secondItem="4ip-E7-Kw6" secondAttribute="trailing" constant="-10" id="ARv-X5-GCL"/>
-                                    <constraint firstItem="CNB-ka-TwF" firstAttribute="top" secondItem="4ip-E7-Kw6" secondAttribute="top" constant="9" id="Jvd-e0-t6n"/>
-                                    <constraint firstItem="CNB-ka-TwF" firstAttribute="leading" secondItem="4ip-E7-Kw6" secondAttribute="leading" id="MwW-CB-gjx"/>
-                                    <constraint firstItem="3fY-Hy-ih6" firstAttribute="top" secondItem="bc7-Tw-Vtz" secondAttribute="bottom" constant="9" id="Mx9-v6-6wj"/>
-                                    <constraint firstItem="bc7-Tw-Vtz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CNB-ka-TwF" secondAttribute="bottom" constant="1" id="ODf-TV-3zF"/>
-                                    <constraint firstAttribute="bottom" secondItem="3fY-Hy-ih6" secondAttribute="bottom" id="ahR-Y5-XeV"/>
-                                    <constraint firstItem="bVO-XA-OrC" firstAttribute="top" secondItem="4ip-E7-Kw6" secondAttribute="top" constant="10" id="gAr-ne-tb6"/>
-                                    <constraint firstItem="3fY-Hy-ih6" firstAttribute="leading" secondItem="4ip-E7-Kw6" secondAttribute="leading" constant="10" id="icn-Ii-Dz8"/>
-                                    <constraint firstItem="bc7-Tw-Vtz" firstAttribute="leading" secondItem="4ip-E7-Kw6" secondAttribute="leading" id="lPy-fQ-8FA"/>
-                                </constraints>
-                            </view>
-                        </subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1i-MV-2JG" userLabel="separatorView">
+                        <rect key="frame" x="0.0" y="121" width="431" height="10"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4ip-E7-Kw6" secondAttribute="trailing" id="B5R-rr-sjM"/>
-                            <constraint firstItem="4ip-E7-Kw6" firstAttribute="leading" secondItem="kIV-Lh-CRT" secondAttribute="leading" id="CTE-vi-7A7"/>
-                            <constraint firstAttribute="bottom" secondItem="4ip-E7-Kw6" secondAttribute="bottom" id="FMe-js-tsT"/>
-                            <constraint firstItem="4ip-E7-Kw6" firstAttribute="top" secondItem="kIV-Lh-CRT" secondAttribute="top" id="L03-Q9-WLi"/>
+                            <constraint firstAttribute="height" constant="10" id="XK3-FK-eSt"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NBA／「哈登人生」變骨牌？美媒曝76人新煩惱：恩比德恐跟進" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mby-tl-sKR" userLabel="cTitle">
+                        <rect key="frame" x="8" y="10" width="200" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023/08/23 15:27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrj-u6-fBs" userLabel="cDate">
+                        <rect key="frame" x="8" y="94" width="200" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_3" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-LI-WVQ" userLabel="cImgView" customClass="AnimatedImageView" customModule="Kingfisher">
+                        <rect key="frame" x="216" y="0.0" width="215" height="121"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NcT-LI-WVQ" secondAttribute="height" multiplier="16:9" id="fLf-15-f4K"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" name="BackgroundColor"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="kIV-Lh-CRT" secondAttribute="bottom" constant="8.5" id="0OR-vY-hWl"/>
-                    <constraint firstItem="kIV-Lh-CRT" firstAttribute="top" secondItem="biA-1b-qOU" secondAttribute="top" constant="10" id="0fa-jT-Lg9"/>
-                    <constraint firstAttribute="trailing" secondItem="kIV-Lh-CRT" secondAttribute="trailing" constant="10" id="Ece-9C-ZwN"/>
-                    <constraint firstItem="bVO-XA-OrC" firstAttribute="width" secondItem="biA-1b-qOU" secondAttribute="width" multiplier="0.43" id="Z37-Gp-iBN"/>
-                    <constraint firstItem="CNB-ka-TwF" firstAttribute="width" secondItem="biA-1b-qOU" secondAttribute="width" multiplier="0.489451" id="m0C-BQ-zZ8"/>
-                    <constraint firstItem="kIV-Lh-CRT" firstAttribute="leading" secondItem="biA-1b-qOU" secondAttribute="leading" constant="10" id="m8Z-g6-EAR"/>
+                    <constraint firstAttribute="bottom" secondItem="D1i-MV-2JG" secondAttribute="bottom" id="3Dr-P1-gOl"/>
+                    <constraint firstItem="D1i-MV-2JG" firstAttribute="top" secondItem="Hrj-u6-fBs" secondAttribute="bottom" constant="10" id="448-TL-Ul8"/>
+                    <constraint firstItem="NcT-LI-WVQ" firstAttribute="leading" secondItem="Hrj-u6-fBs" secondAttribute="trailing" constant="8" id="4zb-4A-w65"/>
+                    <constraint firstItem="D1i-MV-2JG" firstAttribute="top" secondItem="NcT-LI-WVQ" secondAttribute="bottom" id="Bgl-D5-cym"/>
+                    <constraint firstItem="NcT-LI-WVQ" firstAttribute="leading" secondItem="mby-tl-sKR" secondAttribute="trailing" constant="8" id="N32-qm-DGW"/>
+                    <constraint firstItem="mby-tl-sKR" firstAttribute="top" secondItem="NZx-ir-SUQ" secondAttribute="top" constant="10" id="OGw-6M-E1o"/>
+                    <constraint firstItem="NcT-LI-WVQ" firstAttribute="width" secondItem="NZx-ir-SUQ" secondAttribute="width" multiplier="0.45" priority="999" id="WQP-IM-EBp"/>
+                    <constraint firstAttribute="trailing" secondItem="D1i-MV-2JG" secondAttribute="trailing" id="ZW6-O5-4Ry"/>
+                    <constraint firstItem="NcT-LI-WVQ" firstAttribute="top" secondItem="NZx-ir-SUQ" secondAttribute="top" id="f7O-RS-kNu"/>
+                    <constraint firstItem="mby-tl-sKR" firstAttribute="leading" secondItem="NZx-ir-SUQ" secondAttribute="leading" constant="8" id="li2-FV-sJ3"/>
+                    <constraint firstItem="D1i-MV-2JG" firstAttribute="leading" secondItem="NZx-ir-SUQ" secondAttribute="leading" id="n1x-C6-dSK"/>
+                    <constraint firstAttribute="trailing" secondItem="NcT-LI-WVQ" secondAttribute="trailing" id="nes-4M-QNC"/>
+                    <constraint firstItem="Hrj-u6-fBs" firstAttribute="leading" secondItem="NZx-ir-SUQ" secondAttribute="leading" constant="8" id="ucZ-zG-wAl"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="gCd-MT-A1a"/>
+            <viewLayoutGuide key="safeArea" id="nY3-Q4-FGn"/>
             <connections>
-                <outlet property="containView" destination="4ip-E7-Kw6" id="DkB-FT-rZG"/>
-                <outlet property="dateLbl" destination="bc7-Tw-Vtz" id="4PT-vI-LZn"/>
-                <outlet property="shadowView" destination="kIV-Lh-CRT" id="xVs-uh-Jdj"/>
-                <outlet property="titleLbl" destination="CNB-ka-TwF" id="Brm-9U-fj5"/>
+                <outlet property="cDateLbl" destination="Hrj-u6-fBs" id="vrM-kA-zqX"/>
+                <outlet property="cImageIV" destination="NcT-LI-WVQ" id="u4r-6N-3N3"/>
+                <outlet property="cTitleLbl" destination="mby-tl-sKR" id="phV-mJ-jfI"/>
             </connections>
-            <point key="canvasLocation" x="193.89312977099235" y="144.01408450704227"/>
+            <point key="canvasLocation" x="-76" y="-26.53673163418291"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="default_3" width="414" height="233"/>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="VideoTimeColor">
-            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
