@@ -34,34 +34,13 @@
                                     <constraint firstAttribute="height" constant="180" id="gvX-aH-lM3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppe-wq-OiK">
-                                <rect key="frame" x="224" y="80" width="83" height="38"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                <state key="normal" title="76人" image="Go">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowUIColor">
-                                        <color key="value" red="0.0" green="1" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowUIRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowUIOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowUIOpacity">
-                                        <real key="value" value="0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-fh-bc4">
                                 <rect key="frame" x="49" y="80" width="83" height="38"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="b9e-RY-Kqv"/>
+                                    <constraint firstAttribute="width" constant="83" id="m4W-1I-5B9"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
                                 <state key="normal" title="籃網" image="Go">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,14 +64,25 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY 17:05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYV-a2-dJI">
-                                <rect key="frame" x="118.66666666666669" y="16" width="113" height="22"/>
+                                <rect key="frame" x="100" y="16" width="150" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="HRH-8f-vq8"/>
+                                    <constraint firstAttribute="width" constant="150" id="HRH-8f-vq8"/>
                                     <constraint firstAttribute="height" constant="22" id="Q6z-1Y-m7d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7,212人以預測" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-WN-Tpk">
                                 <rect key="frame" x="121" y="146" width="108.33333333333331" height="17"/>
@@ -117,10 +107,38 @@
                                     <constraint firstAttribute="width" constant="22" id="sUX-Uc-NAi"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chM-aT-Q7p">
+                                <rect key="frame" x="218" y="80" width="83" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="2ns-aj-O9L"/>
+                                    <constraint firstAttribute="height" constant="38" id="nsZ-WN-5b8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="76人" image="Go">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowUIColor">
+                                        <color key="value" red="0.0" green="1" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowUIRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowUIOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowUIOpacity">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ppe-wq-OiK" firstAttribute="centerY" secondItem="hjs-or-u9p" secondAttribute="centerY" constant="9" id="4eu-iq-ZVb"/>
                             <constraint firstItem="hjs-or-u9p" firstAttribute="top" secondItem="9FG-1E-kyK" secondAttribute="top" id="Bxa-jg-sb6"/>
                             <constraint firstItem="c0g-Av-0WN" firstAttribute="centerY" secondItem="jMd-WN-Tpk" secondAttribute="centerY" id="CFC-FJ-13l"/>
                             <constraint firstAttribute="bottom" secondItem="hjs-or-u9p" secondAttribute="bottom" id="EGb-VJ-wLE"/>
@@ -130,20 +148,24 @@
                             <constraint firstAttribute="width" constant="350" id="Lqs-ba-pUo"/>
                             <constraint firstItem="Chi-RQ-7BQ" firstAttribute="top" secondItem="9FG-1E-kyK" secondAttribute="top" id="M3x-3r-foo"/>
                             <constraint firstItem="hjs-or-u9p" firstAttribute="leading" secondItem="Chi-RQ-7BQ" secondAttribute="trailing" id="NUT-xp-ePF"/>
-                            <constraint firstItem="ppe-wq-OiK" firstAttribute="centerX" secondItem="hjs-or-u9p" secondAttribute="centerX" constant="3" id="ONX-TP-m4B"/>
-                            <constraint firstAttribute="bottom" secondItem="byZ-fh-bc4" secondAttribute="bottom" constant="62" id="R1p-HH-ggH"/>
                             <constraint firstItem="7mZ-dF-CPx" firstAttribute="centerX" secondItem="9FG-1E-kyK" secondAttribute="centerX" id="VfW-pY-6z7"/>
                             <constraint firstAttribute="height" constant="180" id="aVN-CO-HJ3"/>
-                            <constraint firstItem="byZ-fh-bc4" firstAttribute="leading" secondItem="9FG-1E-kyK" secondAttribute="leading" constant="49" id="fjP-Kd-mWZ"/>
+                            <constraint firstItem="7mZ-dF-CPx" firstAttribute="leading" secondItem="byZ-fh-bc4" secondAttribute="trailing" constant="32" id="eeA-BH-crb"/>
                             <constraint firstItem="lYV-a2-dJI" firstAttribute="top" secondItem="9FG-1E-kyK" secondAttribute="top" constant="16" id="hfK-sZ-r2V"/>
                             <constraint firstItem="lYV-a2-dJI" firstAttribute="centerX" secondItem="9FG-1E-kyK" secondAttribute="centerX" id="hwJ-Lg-tLK"/>
                             <constraint firstAttribute="bottom" secondItem="Chi-RQ-7BQ" secondAttribute="bottom" id="jGV-3v-ura"/>
                             <constraint firstAttribute="trailing" secondItem="hjs-or-u9p" secondAttribute="trailing" id="mbg-FW-Fhy"/>
                             <constraint firstItem="jMd-WN-Tpk" firstAttribute="centerX" secondItem="9FG-1E-kyK" secondAttribute="centerX" id="qEf-Q4-wB0"/>
-                            <constraint firstItem="hjs-or-u9p" firstAttribute="leading" secondItem="byZ-fh-bc4" secondAttribute="trailing" constant="43" id="uM2-bO-0gV"/>
+                            <constraint firstItem="chM-aT-Q7p" firstAttribute="centerY" secondItem="7mZ-dF-CPx" secondAttribute="centerY" id="qgF-7B-AUf"/>
+                            <constraint firstItem="c0g-Av-0WN" firstAttribute="top" secondItem="byZ-fh-bc4" secondAttribute="bottom" constant="25.666666666666657" id="sKf-Sm-Cbs"/>
+                            <constraint firstItem="chM-aT-Q7p" firstAttribute="leading" secondItem="7mZ-dF-CPx" secondAttribute="trailing" constant="32" id="tZz-3P-ysQ"/>
                             <constraint firstItem="jMd-WN-Tpk" firstAttribute="leading" secondItem="c0g-Av-0WN" secondAttribute="trailing" id="xas-d4-zSR"/>
-                            <constraint firstItem="byZ-fh-bc4" firstAttribute="top" secondItem="9FG-1E-kyK" secondAttribute="top" constant="80" id="yHz-as-GbA"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -162,7 +184,7 @@
                 <outlet property="baseView" destination="9FG-1E-kyK" id="cgW-gl-h5P"/>
                 <outlet property="countLabel" destination="jMd-WN-Tpk" id="02N-9u-e6M"/>
                 <outlet property="dateTimeLable" destination="lYV-a2-dJI" id="42p-Pp-Vdf"/>
-                <outlet property="homeButton" destination="ppe-wq-OiK" id="E4n-Qq-Fk7"/>
+                <outlet property="homeButton" destination="chM-aT-Q7p" id="9Sq-4K-cJg"/>
                 <outlet property="homeIV" destination="hjs-or-u9p" id="obp-dr-pMk"/>
             </connections>
             <point key="canvasLocation" x="80.916030534351137" y="-34.507042253521128"/>

@@ -40,6 +40,13 @@
                         <color key="textColor" red="0.42352941176470588" green="0.44313725490196076" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="UqI-5u-ofG">
+                        <rect key="frame" x="128" y="14" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="VJw-5z-tjk"/>
+                            <constraint firstAttribute="width" constant="20" id="pCG-ID-kQs"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,6 +54,8 @@
                     <constraint firstItem="laG-Fb-Tpe" firstAttribute="centerY" secondItem="yXo-qt-c24" secondAttribute="centerY" id="7mz-PA-g3L"/>
                     <constraint firstAttribute="bottom" secondItem="yXo-qt-c24" secondAttribute="bottom" constant="16" id="AUj-Dy-f4D"/>
                     <constraint firstItem="yXo-qt-c24" firstAttribute="top" secondItem="bz9-jL-aHz" secondAttribute="top" constant="8" id="L3X-mV-25y"/>
+                    <constraint firstItem="UqI-5u-ofG" firstAttribute="centerY" secondItem="laG-Fb-Tpe" secondAttribute="centerY" id="NT5-J3-m3e"/>
+                    <constraint firstItem="laG-Fb-Tpe" firstAttribute="leading" secondItem="UqI-5u-ofG" secondAttribute="trailing" id="RO4-L1-kRq"/>
                     <constraint firstItem="laG-Fb-Tpe" firstAttribute="centerX" secondItem="yXo-qt-c24" secondAttribute="centerX" id="fAf-dy-hEq"/>
                     <constraint firstItem="yXo-qt-c24" firstAttribute="leading" secondItem="bz9-jL-aHz" secondAttribute="leading" constant="20" id="htz-kk-d4D"/>
                     <constraint firstAttribute="trailing" secondItem="yXo-qt-c24" secondAttribute="trailing" constant="20" id="oob-wl-jzR"/>
@@ -59,4 +68,7 @@
             <point key="canvasLocation" x="-175.57251908396947" y="61.971830985915496"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Schedule" width="20" height="20"/>
+    </resources>
 </document>
