@@ -248,7 +248,7 @@ class SportsIndexVC: UIViewController {
 
 extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        return 17
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -280,25 +280,24 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
 ////            cell.stCarouselView.delegate = self
 //            cell.selectionStyle = .none
 //            return cell
-        //TOAD 廣告
-//        case 4:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "aDBigCardCell", for: indexPath) as! ADBigCardCell
-//            return cell
         case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "aDBigCardCell", for: indexPath) as! ADBigCardCell
+            return cell
+        case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
             cell.selectionStyle = .none
             cell.configureWithData(title: "NBA")
             return cell
-        case 5,6,7,8,9:
+        case 6,7,8,9,10:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
             cell.selectionStyle = .none
             return cell
-        case 10:
+        case 11:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
             cell.selectionStyle = .none
             cell.configureWithData(title: "MLB")
             return cell
-        case 11,12,13,14,15:
+        case 12,13,14,15,16:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
             cell.selectionStyle = .none
             return cell
@@ -316,7 +315,9 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 1 {
-            return 250
+            return 200
+        } else if indexPath.row == 4 {
+            return 370
         } else{
             return UITableView.automaticDimension
         }

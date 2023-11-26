@@ -13,7 +13,7 @@ import Firebase
 //import GoogleMobileAds
 
 class ADBigCardCell: UITableViewCell {
-//    @IBOutlet weak var adBaseView: GADNativeAdView!
+    @IBOutlet weak var adBaseView: UIView!
     @IBOutlet weak var adTopExcisionView: UIView!
     @IBOutlet weak var adSponsoredLbl: UILabel!
     @IBOutlet weak var adTitleLbl: UILabel!
@@ -105,7 +105,7 @@ class ADBigCardCell: UITableViewCell {
     }
     
     func showObject() {
-//        self.adBaseView.isHidden   = false
+        self.adBaseView.isHidden   = false
         self.adSponsorLbl.isHidden = false
         self.adTitleLbl.isHidden   = false
 //        self.adMediaView.isHidden  = false
