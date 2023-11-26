@@ -14,6 +14,8 @@ class SportsArticleListCell: UITableViewCell {
     @IBOutlet weak var cDateLbl: UILabel!
     @IBOutlet weak var cImageIV: UIImageView!
     
+    @IBOutlet weak var cellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

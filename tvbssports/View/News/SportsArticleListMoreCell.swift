@@ -17,6 +17,11 @@ class SportsArticleListMoreCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    //TODO check 跑版
+    override func layoutSubviews() {
+        super.layoutSubviews()
         configureCellView()
     }
     
