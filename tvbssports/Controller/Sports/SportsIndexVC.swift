@@ -273,31 +273,30 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: myRecordCell, for: indexPath) as! MyRecordCell
             cell.selectionStyle = .none
             return cell
-        //TODO 熱門新聞
-//        case 4:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: sportsNewsCarouselCell, for: indexPath) as! SportsNewsCarouselCell
-//            cell.configureWithData()
-////            cell.stCarouselView.delegate = self
-//            cell.selectionStyle = .none
-//            return cell
         case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "aDBigCardCell", for: indexPath) as! ADBigCardCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: sportsNewsCarouselCell, for: indexPath) as! SportsNewsCarouselCell
+            cell.configureWithData()
+            cell.spCarouselView.delegate = self
+            cell.selectionStyle = .none
             return cell
         case 5:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "aDBigCardCell", for: indexPath) as! ADBigCardCell
+            return cell
+        case 6:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
             cell.selectionStyle = .none
             cell.configureWithData(title: "NBA")
             return cell
-        case 6,7,8,9,10:
+        case 7,8,9,10,11:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
             cell.selectionStyle = .none
             return cell
-        case 11:
+        case 12:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListMoreCell", for: indexPath) as! SportsArticleListMoreCell
             cell.selectionStyle = .none
             cell.configureWithData(title: "MLB")
             return cell
-        case 12,13,14,15,16:
+        case 13,14,15,16,17:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sportsArticleListCell", for: indexPath) as! SportsArticleListCell
             cell.selectionStyle = .none
             return cell
@@ -309,13 +308,13 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 5, 11:
+        case 6, 12:
             if let sportsCell = cell as? SportsArticleListMoreCell {
                 sportsCell.selectionStyle = .none
                 sportsCell.configureCellView()
             }
             
-        case 10, 16:
+        case 11, 17:
             if let sportsCell = cell as? SportsArticleListCell {
                 sportsCell.selectionStyle = .none
                 sportsCell.configureCellView(isCornerRadius: true)
@@ -335,7 +334,7 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
         
         if indexPath.row == 1 {
             return 200
-        } else if indexPath.row == 4 {
+        } else if indexPath.row == 5 {
             return 370
         } else{
             return UITableView.automaticDimension

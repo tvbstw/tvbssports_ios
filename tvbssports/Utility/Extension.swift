@@ -127,7 +127,7 @@ extension UIColor {
     class var selectColor: UIColor {return UIColor(named: "SelectColor")!}          // #0098FF
     class var videoTimeColor: UIColor {return UIColor(named: "VideoTimeColor")!}    // #999999
     class var unSelectColor: UIColor {return UIColor(named: "UnSelectColor")!}          // #0098FF
-    class var tableBackgroundColor: UIColor {return UIColor(named: "TableBackgroundColor")!}          // #0098FF
+    class var tableBackgroundColor: UIColor {return UIColor(named: "TableBackgroundColor")!}          // #
 }
 
 extension UIApplication {

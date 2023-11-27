@@ -17,32 +17,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="407"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flj-cX-2Kw" customClass="LLCycleScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flj-cX-2Kw" customClass="LLCycleScrollView" customModule="tvbssports" customModuleProvider="target">
+                        <rect key="frame" x="20" y="0.0" width="560" height="373.33333333333331"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Flj-cX-2Kw" secondAttribute="height" multiplier="3:2" id="GlO-RT-CsF"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-df-ukh" userLabel="separatorView">
-                        <rect key="frame" x="0.0" y="400" width="600" height="7"/>
-                        <color key="backgroundColor" red="0.8734145015" green="0.88206216979999996" blue="0.88235294119999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="0.0" y="373.33333333333331" width="600" height="33.666666666666686"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.66666666666666663" green="0.68627450980392157" blue="0.69803921568627447" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Flj-cX-2Kw" secondAttribute="trailing" id="Anf-J2-uTf"/>
+                    <constraint firstAttribute="trailing" secondItem="Flj-cX-2Kw" secondAttribute="trailing" constant="20" id="Anf-J2-uTf"/>
                     <constraint firstItem="Flj-cX-2Kw" firstAttribute="top" secondItem="FuU-kU-ZTv" secondAttribute="top" id="IA8-Dd-QVM"/>
                     <constraint firstItem="t8u-df-ukh" firstAttribute="top" secondItem="Flj-cX-2Kw" secondAttribute="bottom" id="TG3-nX-p0m"/>
                     <constraint firstAttribute="trailing" secondItem="t8u-df-ukh" secondAttribute="trailing" id="VNu-ic-uTD"/>
-                    <constraint firstItem="Flj-cX-2Kw" firstAttribute="width" secondItem="FuU-kU-ZTv" secondAttribute="width" id="cKQ-qb-Sil"/>
                     <constraint firstItem="t8u-df-ukh" firstAttribute="leading" secondItem="FuU-kU-ZTv" secondAttribute="leading" id="m8p-v1-esh"/>
                     <constraint firstAttribute="bottom" secondItem="t8u-df-ukh" secondAttribute="bottom" id="oAC-Cw-1NG"/>
-                    <constraint firstItem="Flj-cX-2Kw" firstAttribute="leading" secondItem="FuU-kU-ZTv" secondAttribute="leading" id="x85-yV-k77"/>
+                    <constraint firstItem="Flj-cX-2Kw" firstAttribute="leading" secondItem="FuU-kU-ZTv" secondAttribute="leading" constant="20" id="x85-yV-k77"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ZaZ-N4-9nO"/>
             <connections>
-                <outlet property="stCarouselView" destination="Flj-cX-2Kw" id="StK-sa-SAG"/>
+                <outlet property="spCarouselView" destination="Flj-cX-2Kw" id="32E-sQ-KGk"/>
             </connections>
             <point key="canvasLocation" x="-448" y="17.364532019704434"/>
         </tableViewCell>
