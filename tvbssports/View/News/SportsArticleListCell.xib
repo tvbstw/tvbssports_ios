@@ -52,7 +52,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.66666666669999997" green="0.68627450980000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.66666666669999997" green="0.68627450980000004" blue="0.69803921570000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="D1i-MV-2JG" secondAttribute="bottom" id="3Dr-P1-gOl"/>
                     <constraint firstItem="D1i-MV-2JG" firstAttribute="top" secondItem="Hrj-u6-fBs" secondAttribute="bottom" constant="10" id="448-TL-Ul8"/>
