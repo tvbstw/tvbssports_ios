@@ -244,6 +244,18 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
         }
     }
     
+    // MARK: 日期資料來源
+    // 日期
+    open var dates: Array<String> = [] {
+        didSet {
+            if dates.count > 0 {
+                if imagePaths.count == 0 {
+                    imagePaths = dates
+                }
+            }
+        }
+    }
+    
     // MARK: 闭包
     // 回调
     open var lldidSelectItemAtIndex: LLdidSelectItemAtIndexClosure? = nil
@@ -308,11 +320,12 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
     }
     
     // MARK: 初始化
-    open class func llCycleScrollViewWithFrame(_ frame: CGRect, imageURLPaths: Array<String>? = [], titles:Array<String>? = [], didSelectItemAtIndex: LLdidSelectItemAtIndexClosure? = nil) -> LLCycleScrollView {
+    open class func llCycleScrollViewWithFrame(_ frame: CGRect, imageURLPaths: Array<String>? = [], titles:Array<String>? = [], dates:Array<String>? = [], didSelectItemAtIndex: LLdidSelectItemAtIndexClosure? = nil) -> LLCycleScrollView {
         let llcycleScrollView: LLCycleScrollView = LLCycleScrollView.init(frame: frame)
         // Nil
         llcycleScrollView.imagePaths = []
         llcycleScrollView.titles = []
+        llcycleScrollView.dates = []
         
         if let imageURLPathList = imageURLPaths, imageURLPathList.count > 0 {
             llcycleScrollView.imagePaths = imageURLPathList
@@ -320,6 +333,10 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
         
         if let titleList = titles, titleList.count > 0 {
             llcycleScrollView.titles = titleList
+        }
+        
+        if let dateList = dates, dateList.count > 0 {
+            llcycleScrollView.dates = dateList
         }
         
         if didSelectItemAtIndex != nil {
@@ -570,7 +587,7 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
         // Setting
         cell.titleFont = font
         cell.titleLabelTextColor = textColor
-        cell.titleBackViewBackgroundColor = titleBackgroundColor
+//        cell.titleBackViewBackgroundColor = titleBackgroundColor
         cell.titleLines = numberOfLines
         
         // Leading
@@ -615,8 +632,10 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
                 // 对冲数据判断
                 if itemIndex <= titles.count-1 {
                     cell.title = titles[itemIndex]
+                    cell.date = dates[itemIndex]
                 }else{
                     cell.title = ""
+                    cell.date = ""
                 }
             }
         }
