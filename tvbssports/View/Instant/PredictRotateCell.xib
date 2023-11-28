@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="4" width="407" height="206"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-Ey-H3e">
-                                <rect key="frame" x="10" y="0.0" width="387" height="206"/>
+                                <rect key="frame" x="20" y="0.0" width="367" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tEg-DC-6yM">
                                     <size key="itemSize" width="128" height="128"/>
@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="s1i-Ey-H3e" firstAttribute="leading" secondItem="9cW-Qz-fC2" secondAttribute="leading" constant="10" id="Ppc-DW-GuL"/>
+                            <constraint firstItem="s1i-Ey-H3e" firstAttribute="leading" secondItem="9cW-Qz-fC2" secondAttribute="leading" constant="20" id="Ppc-DW-GuL"/>
                             <constraint firstItem="s1i-Ey-H3e" firstAttribute="top" secondItem="9cW-Qz-fC2" secondAttribute="top" id="YXx-7K-qZZ"/>
                             <constraint firstAttribute="bottom" secondItem="s1i-Ey-H3e" secondAttribute="bottom" id="npf-Ph-mmq"/>
-                            <constraint firstAttribute="trailing" secondItem="s1i-Ey-H3e" secondAttribute="trailing" constant="10" id="qDT-Ze-PSv"/>
+                            <constraint firstAttribute="trailing" secondItem="s1i-Ey-H3e" secondAttribute="trailing" constant="20" id="qDT-Ze-PSv"/>
                         </constraints>
                     </view>
                 </subviews>
