@@ -334,6 +334,8 @@ extension SportsIndexVC :UITableViewDelegate ,UITableViewDataSource {
         
         if indexPath.row == 1 {
             return 200
+        } else if indexPath.row == 4 {
+            return 300
         } else if indexPath.row == 5 {
             return 370
         } else{
@@ -353,14 +355,15 @@ extension SportsIndexVC : ApiStatusCellDelegate {
 
 extension SportsIndexVC:LLCycleScrollViewDelegate {
     func cycleScrollView(_ cycleScrollView: LLCycleScrollView, didSelectItemIndex index: NSInteger) {
-        guard let apiUrl = rotateList?[safe:index]?.api_url, let title = rotateList?[safe:index]?.title, let newsID = rotateList?[safe:index]?.news_id, let category = rotateList?[safe:index]?.enName, let categoryCh = rotateList?[safe:index]?.name else {
-            return
-        }
-        let faEvent  = FaEvent.click_article.rawValue
-        let faAction = "world_article_headline"
-        let faLabel = "\(title)_\(newsID)_頭條_全球文章列表"
-        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
-        let vc = ContentVC(apiUrl,categoryCh)
-        self.navigationController?.pushViewController(vc, animated: true)
+        //TODO
+//        guard let apiUrl = rotateList?[safe:index]?.api_url, let title = rotateList?[safe:index]?.title, let newsID = rotateList?[safe:index]?.news_id, let category = rotateList?[safe:index]?.enName, let categoryCh = rotateList?[safe:index]?.name else {
+//            return
+//        }
+//        let faEvent  = FaEvent.click_article.rawValue
+//        let faAction = "world_article_headline"
+//        let faLabel = "\(title)_\(newsID)_頭條_全球文章列表"
+//        US.setAnalyticsLogEnvent(event: faEvent, action: faAction, label: faLabel)
+//        let vc = ContentVC(apiUrl,categoryCh)
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

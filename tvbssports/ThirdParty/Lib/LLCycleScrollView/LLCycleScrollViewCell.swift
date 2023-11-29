@@ -25,10 +25,8 @@ class LLCycleScrollViewCell: UICollectionViewCell {
             self.titleLabel.attributedText = NSAttributedString(string: self.title, attributes: attrs)
             
             if title.count > 0 {
-                titleBackView.isHidden = false
                 titleLabel.isHidden = false
             }else{
-                titleBackView.isHidden = true
                 titleLabel.isHidden = true
             }
         }
@@ -48,10 +46,8 @@ class LLCycleScrollViewCell: UICollectionViewCell {
             self.dateLabel.attributedText = NSAttributedString(string: self.date, attributes: attrs)
             
             if date.count > 0 {
-                dateBackView.isHidden = false
                 dateLabel.isHidden = false
             }else{
-                dateBackView.isHidden = true
                 dateLabel.isHidden = true
             }
         }
@@ -108,8 +104,6 @@ class LLCycleScrollViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupImageView()
-        setupLabelBackView()
-        setupDateBackView()
         setupTitleLabel()
         setupDateLabel()
     }
@@ -136,22 +130,6 @@ class LLCycleScrollViewCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
     }
     
-    // Setup Label BackView
-    fileprivate func setupLabelBackView() {
-        // 20180731 修改套件 加大間距 Leon
-        titleBackView = CycleTitleGradientView.init(frame: CGRect.init(x: 0, y: self.ll_h - titleLabelHeight * 1.2, width: self.ll_w, height: titleLabelHeight * 1.2))
-        titleBackView.isHidden = true
-        self.contentView.addSubview(titleBackView)
-    }
-    
-    // Setup date BackView
-    fileprivate func setupDateBackView() {
-        // 20180731 修改套件 加大間距 Leon
-        dateBackView = CycleTitleGradientView.init(frame: CGRect.init(x: 0, y: self.ll_h - titleLabelHeight * 0.7, width: self.ll_w, height: titleLabelHeight * 1.2))
-        dateBackView.isHidden = true
-        self.contentView.addSubview(dateBackView)
-    }
-    
     // Setup Title
     fileprivate func setupTitleLabel() {
         titleLabel = UILabel.init()
@@ -160,24 +138,24 @@ class LLCycleScrollViewCell: UICollectionViewCell {
         titleLabel.numberOfLines = titleLines
         titleLabel.font = titleFont
         titleLabel.backgroundColor = UIColor.clear
-        titleBackView.addSubview(titleLabel)
+        self.contentView.addSubview(titleLabel)
     }
     
     // 設定日期標籤
     fileprivate func setupDateLabel() {
         dateLabel = UILabel()
         dateLabel.isHidden = true
-        dateLabel.textColor = titleLabelTextColor // 或是設定您想要的顏色
+        dateLabel.textColor =  UIColor(red: 0.665, green: 0.685, blue: 0.7, alpha: 1) // 或是設定您想要的顏色
         dateLabel.font = UIFont.systemFont(ofSize: 12) // 或是設定您想要的字型和大小
         dateLabel.backgroundColor = UIColor.clear
-        dateBackView.addSubview(dateLabel)
+        self.contentView.addSubview(dateLabel)
     }
     
     // MARK: layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         imageView.frame = CGRect.init(x: 0, y: 0, width: self.ll_w, height: 180)
-        titleLabel.frame = CGRect.init(x: 12 , y: 0 , width: self.ll_w - titleLabelLeading - 40, height: titleLabelHeight)
-        dateLabel.frame = CGRect.init(x: 12 , y: 0 , width: self.ll_w - titleLabelLeading - 40, height: titleLabelHeight)
+        titleLabel.frame = CGRect.init(x: 12 , y: 180 , width: self.ll_w - 24 , height: titleLabelHeight)
+        dateLabel.frame = CGRect.init(x: 12 , y: 236 , width: self.ll_w - 24, height: 16)
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 import Kingfisher
 // 20180417 修改套件 支援Webp Eddie
 import KingfisherWebP
+import FSPagerView
+
 public enum PageControlStyle {
     case none
     case system
@@ -197,6 +199,8 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
         }
     }
     
+    open var  fsPageControl : FSPageControl?
+    
     
     // MARK: 数据源
     // ImagePaths
@@ -230,7 +234,7 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
     open var font: UIFont = UIFont.systemFont(ofSize: 15)
     
     // 文本区域背景颜色
-    open var titleBackgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3)
+    open var titleBackgroundColor: UIColor = UIColor.white
     
     // MARK: 标题数据源
     // 标题
@@ -657,6 +661,7 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
         let indexOnPageControl = pageControlIndexWithCurrentCellIndex(index: currentIndex())
         if customPageControlStyle == .none || customPageControlStyle == .system || customPageControlStyle == .image {
             pageControl?.currentPage = indexOnPageControl
+            fsPageControl?.currentPage = indexOnPageControl
         }else{
             var progress: CGFloat = 999
             // 方向
