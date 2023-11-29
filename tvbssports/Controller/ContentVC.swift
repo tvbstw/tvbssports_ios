@@ -559,15 +559,15 @@ extension ContentVC: BottomShareViewProtocol {
     
     func shareBtnClick() {
         
-        let shortUrl = "https://bit.ly/3QUIuMe"
-        let shareString = "這則國際新聞非看不可\n\n\(self.newsTitle)\n\(self.shareUrl)\n\n最專業的國際新聞，都在TVBS國際+APP\n\(shortUrl)"
+//        let shortUrl = "https://bit.ly/3QUIuMe"
+//        let shareString = "這則國際新聞非看不可\n\n\(self.newsTitle)\n\(self.shareUrl)\n\n最專業的國際新聞，都在TVBS國際+APP\n\(shortUrl)"
         
-        let activity = UIActivityViewController(activityItems: [shareString], applicationActivities: nil)
-        self.present(activity, animated: true, completion: nil)
-        
-        //FA
-        let shareFa = "\(self.newsTitle)_\(self.newsID)_文章內頁"
-        US.setShareAnalyticsLogEnvent(contentType: shareFa)
+//        let activity = UIActivityViewController(activityItems: [shareString], applicationActivities: nil)
+//        self.present(activity, animated: true, completion: nil)
+//        
+//        //FA
+//        let shareFa = "\(self.newsTitle)_\(self.newsID)_文章內頁"
+//        US.setShareAnalyticsLogEnvent(contentType: shareFa)
     }
 
 }

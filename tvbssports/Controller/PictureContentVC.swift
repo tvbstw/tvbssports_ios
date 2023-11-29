@@ -252,22 +252,22 @@ extension PictureContentVC: BottomShareViewProtocol {
     
     func shareBtnClick() {
         
-        let name = pictureContent?.name ?? ""
-        let description = pictureContent?.description ?? ""
-        
-        let shortUrl = "https://bit.ly/3QUIuMe"
-
-        let shareString = " 看圖說新聞「\(name)」\n\n\n\(description)\n\n用圖片帶您輕鬆掌握國際大小事!快來下載TVBS國際+APP\n\(shortUrl)"
-
-        let image = shareImage
-        
-        let activity = UIActivityViewController(activityItems: [shareString,image ?? ""], applicationActivities: nil)
-        self.present(activity, animated: true, completion: nil)
-
-        
-        //FA
-        let shareFa = "\(name)_\(picture?.pictureId ?? 0)_圖輯內頁"
-        US.setShareAnalyticsLogEnvent(contentType: shareFa)
+//        let name = pictureContent?.name ?? ""
+//        let description = pictureContent?.description ?? ""
+//        
+//        let shortUrl = "https://bit.ly/3QUIuMe"
+//
+//        let shareString = " 看圖說新聞「\(name)」\n\n\n\(description)\n\n用圖片帶您輕鬆掌握國際大小事!快來下載TVBS國際+APP\n\(shortUrl)"
+//
+//        let image = shareImage
+//
+//        let activity = UIActivityViewController(activityItems: [shareString,image ?? ""], applicationActivities: nil)
+//        self.present(activity, animated: true, completion: nil)
+//
+//
+//        //FA
+//        let shareFa = "\(name)_\(picture?.pictureId ?? 0)_圖輯內頁"
+//        US.setShareAnalyticsLogEnvent(contentType: shareFa)
 
     }
 

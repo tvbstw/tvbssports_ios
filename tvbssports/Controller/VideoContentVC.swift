@@ -84,8 +84,6 @@ class VideoContentVC: BaseVC {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // APP- 906 [國際+][iOS]影片推播FA
-        // FA
         US.pushShowScreen()
     }
     
@@ -198,8 +196,6 @@ extension VideoContentVC {
             self?.player = player
         })
         
-        // APP- 906 [國際+][iOS]影片推播FA
-        // FA
         US.pushVideoPlay(videoId)
         
     }

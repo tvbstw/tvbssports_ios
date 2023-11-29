@@ -38,7 +38,7 @@ class ADBigCardCell: UITableViewCell {
     fileprivate var superVC: UIViewController?
     
     #if !(targetEnvironment(simulator))
-    fileprivate var nativeAdArr = [(type: String, index: Int, data: GADNativeAd)]()    //儲存廣告laod過的資料
+//    fileprivate var nativeAdArr = [(type: String, index: Int, data: GADNativeAd)]()    //儲存廣告laod過的資料
     #endif
     
     override func awakeFromNib() {
@@ -98,7 +98,7 @@ class ADBigCardCell: UITableViewCell {
                 //SM.adArr[self.menuID]?.hiddenIndexPathArr.removeAll()
                 //self.hiddenRowArr.removeAll()
                 //self.loadedRowArr.removeAll()
-                self.nativeAdArr.removeAll()
+//                self.nativeAdArr.removeAll()
             }
         }
         #endif

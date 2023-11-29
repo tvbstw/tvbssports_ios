@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="UqI-5u-ofG">
-                        <rect key="frame" x="128" y="14" width="20" height="20"/>
+                        <rect key="frame" x="124" y="14" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="VJw-5z-tjk"/>
                             <constraint firstAttribute="width" constant="20" id="pCG-ID-kQs"/>
@@ -55,7 +55,7 @@
                     <constraint firstAttribute="bottom" secondItem="yXo-qt-c24" secondAttribute="bottom" constant="16" id="AUj-Dy-f4D"/>
                     <constraint firstItem="yXo-qt-c24" firstAttribute="top" secondItem="bz9-jL-aHz" secondAttribute="top" constant="8" id="L3X-mV-25y"/>
                     <constraint firstItem="UqI-5u-ofG" firstAttribute="centerY" secondItem="laG-Fb-Tpe" secondAttribute="centerY" id="NT5-J3-m3e"/>
-                    <constraint firstItem="laG-Fb-Tpe" firstAttribute="leading" secondItem="UqI-5u-ofG" secondAttribute="trailing" id="RO4-L1-kRq"/>
+                    <constraint firstItem="laG-Fb-Tpe" firstAttribute="leading" secondItem="UqI-5u-ofG" secondAttribute="trailing" constant="4" id="RO4-L1-kRq"/>
                     <constraint firstItem="laG-Fb-Tpe" firstAttribute="centerX" secondItem="yXo-qt-c24" secondAttribute="centerX" id="fAf-dy-hEq"/>
                     <constraint firstItem="yXo-qt-c24" firstAttribute="leading" secondItem="bz9-jL-aHz" secondAttribute="leading" constant="20" id="htz-kk-d4D"/>
                     <constraint firstAttribute="trailing" secondItem="yXo-qt-c24" secondAttribute="trailing" constant="20" id="oob-wl-jzR"/>
