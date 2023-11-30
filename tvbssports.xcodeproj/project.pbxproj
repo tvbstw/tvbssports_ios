@@ -2135,14 +2135,14 @@
 				CODE_SIGN_ENTITLEMENTS = tvbssports/tvbssports.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SANBC4ZN9M;
+				DEVELOPMENT_TEAM = 922RJBXUX4;
 				INFOPLIST_FILE = tvbssports/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "大運動+";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.23112903;
+				MARKETING_VERSION = 1.0.23113001;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tvbs.tvbssports;
 				PRODUCT_NAME = tvbssports;
 				SWIFT_OBJC_BRIDGING_HEADER = "tvbssports/tvbssports-Bridging-Header.h";
@@ -2158,14 +2158,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = tvbssports/tvbssports.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SANBC4ZN9M;
+				DEVELOPMENT_TEAM = 922RJBXUX4;
 				INFOPLIST_FILE = tvbssports/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "大運動+";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.23112903;
+				MARKETING_VERSION = 1.0.23113001;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tvbs.tvbssports;
 				PRODUCT_NAME = tvbssports;
 				SWIFT_OBJC_BRIDGING_HEADER = "tvbssports/tvbssports-Bridging-Header.h";
@@ -2268,7 +2268,7 @@
 				CODE_SIGN_ENTITLEMENTS = "tvbssports/tvbssports dev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SANBC4ZN9M;
+				DEVELOPMENT_TEAM = 922RJBXUX4;
 				INFOPLIST_FILE = "tvbssports/Info-dev.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "大運動+";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2277,7 +2277,7 @@
 					"$(CONFIGURATION_BUILD_DIR)",
 					"$(FRAMEWORK_SEARCH_PATHS)",
 				);
-				MARKETING_VERSION = 1.0.23112903;
+				MARKETING_VERSION = 1.0.23113001;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tvbs.tvbssports.dev;
 				PRODUCT_NAME = "tvbssports dev";
@@ -2294,7 +2294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_ENTITLEMENTS = "tvbssports/tvbssports dev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SANBC4ZN9M;
+				DEVELOPMENT_TEAM = 922RJBXUX4;
 				INFOPLIST_FILE = "tvbssports/Info-dev.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "大運動+";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2303,7 +2303,7 @@
 					"$(CONFIGURATION_BUILD_DIR)",
 					"$(FRAMEWORK_SEARCH_PATHS)",
 				);
-				MARKETING_VERSION = 1.0.23112903;
+				MARKETING_VERSION = 1.0.23113001;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tvbs.tvbssports.dev;
 				PRODUCT_NAME = "tvbssports dev";
