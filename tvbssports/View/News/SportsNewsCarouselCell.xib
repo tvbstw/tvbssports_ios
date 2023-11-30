@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="sportsNewsCarouselCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="sportsNewsCarouselCell" rowHeight="299" id="YWS-1M-DCr" customClass="SportsNewsCarouselCell" customModule="tvbssports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="596" height="299"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="YWS-1M-DCr" id="FuU-kU-ZTv">
+                <rect key="frame" x="0.0" y="0.0" width="596" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flj-cX-2Kw" customClass="LLCycleScrollView" customModule="tvbssports" customModuleProvider="target">
+                        <rect key="frame" x="20" y="0.0" width="556" height="280"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="280" id="9Rv-vL-vap"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-df-ukh" userLabel="separatorView">
+                        <rect key="frame" x="0.0" y="280" width="596" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="qjB-A5-QjD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.66666666666666663" green="0.68627450980392157" blue="0.69803921568627447" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Flj-cX-2Kw" secondAttribute="trailing" constant="20" id="Anf-J2-uTf"/>
+                    <constraint firstItem="Flj-cX-2Kw" firstAttribute="top" secondItem="FuU-kU-ZTv" secondAttribute="top" id="IA8-Dd-QVM"/>
+                    <constraint firstItem="t8u-df-ukh" firstAttribute="top" secondItem="Flj-cX-2Kw" secondAttribute="bottom" id="TG3-nX-p0m"/>
+                    <constraint firstAttribute="trailing" secondItem="t8u-df-ukh" secondAttribute="trailing" id="VNu-ic-uTD"/>
+                    <constraint firstItem="t8u-df-ukh" firstAttribute="leading" secondItem="FuU-kU-ZTv" secondAttribute="leading" id="m8p-v1-esh"/>
+                    <constraint firstAttribute="bottom" secondItem="t8u-df-ukh" secondAttribute="bottom" id="oAC-Cw-1NG"/>
+                    <constraint firstItem="Flj-cX-2Kw" firstAttribute="leading" secondItem="FuU-kU-ZTv" secondAttribute="leading" constant="20" id="x85-yV-k77"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ZaZ-N4-9nO"/>
+            <connections>
+                <outlet property="spCarouselView" destination="Flj-cX-2Kw" id="32E-sQ-KGk"/>
+            </connections>
+            <point key="canvasLocation" x="-451.90839694656489" y="-20.774647887323944"/>
+        </tableViewCell>
+    </objects>
+</document>

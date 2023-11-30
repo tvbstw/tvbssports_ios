@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_right_disable_opsz24.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

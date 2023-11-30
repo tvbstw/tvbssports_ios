@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="708" id="4fF-Wl-p2R" customClass="EmptyCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="708"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fF-Wl-p2R" id="aTn-cR-lY9">
+                <rect key="frame" x="0.0" y="0.0" width="427" height="708"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw1-ft-pVI">
+                        <rect key="frame" x="0.0" y="0.0" width="427" height="708"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_keep" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-Up-cjn">
+                                <rect key="frame" x="85.5" y="183" width="256" height="341"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VOg-Up-cjn" secondAttribute="height" multiplier="273:363" id="SDu-yF-dP8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VOg-Up-cjn" firstAttribute="centerX" secondItem="Dw1-ft-pVI" secondAttribute="centerX" id="Cqd-U5-ZTs"/>
+                            <constraint firstItem="VOg-Up-cjn" firstAttribute="width" secondItem="Dw1-ft-pVI" secondAttribute="width" multiplier="0.6" id="Iz7-ba-3u6"/>
+                            <constraint firstItem="VOg-Up-cjn" firstAttribute="centerY" secondItem="Dw1-ft-pVI" secondAttribute="centerY" multiplier="0.6" constant="141.09999999999999" id="RQ0-5s-dd9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dw1-ft-pVI" firstAttribute="leading" secondItem="aTn-cR-lY9" secondAttribute="leading" id="XPS-dM-sXM"/>
+                    <constraint firstAttribute="bottom" secondItem="Dw1-ft-pVI" secondAttribute="bottom" id="ZHb-c8-QLl"/>
+                    <constraint firstItem="Dw1-ft-pVI" firstAttribute="top" secondItem="aTn-cR-lY9" secondAttribute="top" id="yOu-fg-viF"/>
+                    <constraint firstAttribute="trailing" secondItem="Dw1-ft-pVI" secondAttribute="trailing" id="z34-em-mEK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="bCe-84-GPa"/>
+            <color key="backgroundColor" red="0.98798996210000001" green="0.55520063639999995" blue="0.3154705465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bgImage" destination="VOg-Up-cjn" id="wLy-GK-be8"/>
+            </connections>
+            <point key="canvasLocation" x="-106.5" y="14"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_keep" width="273" height="363"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,109 @@
+/* 
+  Localizable.strings
+  videoCollection
+
+  Created by darrenChiang on 2023/3/24.
+  Copyright © 2023 Eddie. All rights reserved.
+*/
+
+"全球" = "Global";
+"All" = "ALL";
+"Video" = "Video";
+"Article" = "Article";
+
+"Share" = "Share";
+"Collect" = "Collect";
+
+"SerachContent" = "Search content...";
+
+"Search" = "Search";
+
+//"" = "全球";
+//
+//"" = "字級大小";
+//
+//"" = "小字";
+//
+//"" = "標準";
+
+"Font_Size" = "Font size";
+
+"Big" = "Big";
+
+"Extra_Big" = "Extra Big";
+
+"Normal" = "Normal";
+
+"Setting" = "Setting";
+
+"Category_List_Example" = "Category list display example";
+
+
+"Article_display_Example" = "Article display example";
+
+
+//"" = "文章列表顯示範例";
+
+//"" = "文章顯示範例";
+//
+//"" = "TVBS國際新聞";
+//
+//"" = "TVBS報導";
+//
+//"" = "TVBS國際";
+//
+//"" = "全球動態一上掌握";
+//
+//"" = " TVBS報導";
+//
+//"TVBS International+, Get the latest global news in one hand" = "TVBS 國際＋，全球動態一手掌握";
+
+
+"TVBS_NEWS" = "TVBS reporting";
+"TVBS_Plus_All_Contorl" = "TVBS International+, Get the latest global news in one hand";
+"TVBS_National_NEWS" = "TVBS International News";
+"TVBS_National_All" = "Global economy, international politics, foreign cultures, diverse topics, in-depth coverage";
+
+
+"LookingAttheWorld" = "The World Through a Lens";
+
+"Refresh" = "Refresh";
+
+"PleaseCheckInternet" = "\n Unable to connect. Please check your network status";
+
+//tab
+"Picture" = "Picture";
+
+"SharePictures" = "Share Pictures";
+
+"HomePage" = "Home";
+
+//error
+"PageLost"  = "Sorry, the page is lost. Please find it back soon!";
+"OMG" = "OMG, the network is down!";
+
+"TryAgain" = "Try again";
+
+"NotFoundKey"  = "No related content found, please try a different keyword!";
+"UnReachable_Message" = "OMG, the network is down! \nUnable to connect. Please check your network status";
+
+//update
+"UPdateNow" = "Update Immediately";
+"NewVersion" = "International+ has a new version!\nPerformance optimized for smoother experience。";
+
+"Loading" = "Loading...";
+"LoadingMore" = "LoadingMore...";
+"LetLoad" = "Let go and load...";
+
+
+//影片時長 %s    Video duration %s
+"VideoTime" = "Video duration";
+"VideoWarm" = "Sorry, the video cannot be played here,/n will go to Youtube to watch";
+
+
+"Collect_Success" = "Successfully added to favorites";
+"Collect_Cancel" = "Successfully removed from favorites";
+
+"Further_reading" = "Further reading";
+
+"empty_Live" = "準備中，暫無Live影片";

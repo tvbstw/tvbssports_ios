@@ -1,0 +1,109 @@
+/* 
+  Localizable.strings
+  videoCollection
+
+  Created by darrenChiang on 2023/3/24.
+  Copyright © 2023 Eddie. All rights reserved.
+*/
+
+"全球" = "全球";
+"All" = "全部";
+"Video" = "賽事";
+"Article" = "文章";
+"HomePage" = "即時新聞";
+
+"Share" = "分享";
+"Collect" = "收藏";
+
+"SerachContent" = "請搜尋您感興趣的內容";
+
+"Search" = "搜尋";
+
+"Setting" = "設定";
+
+//"" = "全球";
+//
+//"" = "字級大小";
+//
+//"" = "小字";
+//
+//"" = "標準";
+
+"Font_Size" = "字級大小";
+
+"Normal" = "標準";
+
+"Big" = "大字";
+
+"Extra_Big" = "特大";
+
+"Category_List_Example" = "分類列表顯示範例";
+
+"Article_display_Example" = "文章顯示範例";
+
+
+
+//"" = "文章列表顯示範例";
+
+//"" = "文章顯示範例";
+//
+//"" = "TVBS國際新聞";
+//
+//"" = "TVBS報導";
+//
+//"" = "TVBS國際";
+//
+//"" = "全球動態一上掌握";
+//
+//"" = " TVBS報導";
+
+//"TVBS International+, Get the latest global news in one hand" = "TVBS 國際＋，全球動態一手掌握";
+
+
+"TVBS_NEWS" = "TVBS 報導";
+"TVBS_Plus_All_Contorl" = "TVBS 國際＋，全球動態一手掌握";
+"TVBS_National_NEWS" = "TVBS 國際新聞";
+
+"TVBS_National_All" = "全球經濟、國際政治、異國文化，多元主題、深度報導";
+
+
+"LookingAttheWorld" = "鏡頭看世界";
+
+"Refresh" = "重整一下";
+
+"PleaseCheckInternet" = "\n確認網路連線是否正常";
+
+//tab
+"Picture" = "排行榜";
+
+"SharePictures"  = "圖片分享";
+
+//ERROR
+"PageLost"  = "抱歉 頁面迷路了，快把他找回來吧！";
+
+"OMG"  = "OMG 網路罷工了！";
+
+"TryAgain" = "再試一次";
+"NotFoundKey"  = "查無相關內容，換個關鍵字試試吧！";
+
+"UnReachable_Message" = "OMG 網路罷工了！\n確認網路連線是否正常";
+
+//update
+"UPdateNow" = "立即更新";
+"NewVersion" = "國際+有新版本嘍！\n效能優化，體驗更順暢。";
+"Loading" = "載入中…";
+"LoadingMore" ="載入更多...";
+"LetLoad" = "放開後載入...";
+
+
+//Video
+//影片時長 %s    Video duration %s
+"VideoTime" = "影片時長";
+"VideoWarm" = "很抱歉，影片無法在此播放\n將前往Youtube觀看";
+
+"Collect_Success" = "收藏成功";
+"Collect_Cancel" = "取消收藏成功";
+
+"Further_reading" = "延伸閱讀";
+
+"empty_Live" = "準備中，暫無Live影片";

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sportsArticleListMoreCell" rowHeight="52" id="wQO-Yk-KAq" customClass="SportsArticleListMoreCell" customModule="tvbssports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="wQO-Yk-KAq" id="3oH-tP-uXz">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-O0-ctK">
+                        <rect key="frame" x="20" y="7" width="345" height="34"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SAY-PP-NDd">
+                                <rect key="frame" x="317" y="9" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="HdH-zP-QQf"/>
+                                    <constraint firstAttribute="height" constant="16" id="giw-yy-oyJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiA-GL-Mdg">
+                                <rect key="frame" x="12.000000000000002" y="8.6666666666666643" width="28.666666666666671" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-4z-pSf">
+                                <rect key="frame" x="161" y="9" width="150" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Z9m-t5-6S8"/>
+                                    <constraint firstAttribute="height" constant="16" id="a4b-mw-yRZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="fnz-2U-873"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.80392156859999997" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SAY-PP-NDd" firstAttribute="centerY" secondItem="cCO-O0-ctK" secondAttribute="centerY" id="0tI-vs-vyT"/>
+                            <constraint firstAttribute="height" constant="34" id="1e2-A7-OfC"/>
+                            <constraint firstItem="fzn-4z-pSf" firstAttribute="centerY" secondItem="SAY-PP-NDd" secondAttribute="centerY" id="4Ds-Ct-P7p"/>
+                            <constraint firstAttribute="trailing" secondItem="SAY-PP-NDd" secondAttribute="trailing" constant="12" id="D9E-It-f1B"/>
+                            <constraint firstItem="AiA-GL-Mdg" firstAttribute="centerY" secondItem="cCO-O0-ctK" secondAttribute="centerY" id="rE9-lT-NMh"/>
+                            <constraint firstItem="AiA-GL-Mdg" firstAttribute="leading" secondItem="cCO-O0-ctK" secondAttribute="leading" constant="12" id="rdN-Yh-llV"/>
+                            <constraint firstItem="SAY-PP-NDd" firstAttribute="leading" secondItem="fzn-4z-pSf" secondAttribute="trailing" constant="6" id="xoA-ID-BnK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowUIRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.66666666669999997" green="0.68627450980000004" blue="0.69803921570000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cCO-O0-ctK" secondAttribute="trailing" constant="20" id="71Q-Lb-f9L"/>
+                    <constraint firstItem="cCO-O0-ctK" firstAttribute="leading" secondItem="3oH-tP-uXz" secondAttribute="leading" constant="20" id="Do1-IO-dM8"/>
+                    <constraint firstAttribute="bottom" secondItem="cCO-O0-ctK" secondAttribute="bottom" id="WXP-hS-rfl"/>
+                    <constraint firstItem="cCO-O0-ctK" firstAttribute="top" secondItem="3oH-tP-uXz" secondAttribute="top" constant="7" id="XFV-d2-xc7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Gen-LS-E0f"/>
+            <connections>
+                <outlet property="cellView" destination="cCO-O0-ctK" id="s2e-b8-tkN"/>
+                <outlet property="titleLbl" destination="AiA-GL-Mdg" id="Cpi-pk-lFF"/>
+            </connections>
+            <point key="canvasLocation" x="-177.86259541984731" y="60.563380281690144"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="moreIcon" width="16" height="16"/>
+    </resources>
+</document>

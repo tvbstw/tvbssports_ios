@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colPictureCell" id="gTV-IL-0wX" customClass="ColPictureCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5l-dc-ppJ">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-dG-2Ne">
+                                <rect key="frame" x="0.0" y="0.0" width="294" height="300"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAs-e7-ttP" customClass="PictureGradientView" customModule="videoCollection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="90" width="300" height="210"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文茜的世界周報文茜的世界周報文茜的世界周報" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE2-KU-aTA">
+                                <rect key="frame" x="20" y="219.5" width="260" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_picture" translatesAutoresizingMaskIntoConstraints="NO" id="c3e-KU-9Un">
+                                <rect key="frame" x="0.0" y="15" width="84" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c3e-KU-9Un" secondAttribute="height" multiplier="3:2" id="CXi-YT-gHS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RAs-e7-ttP" firstAttribute="height" secondItem="f5l-dc-ppJ" secondAttribute="height" multiplier="0.7" id="6Xs-vQ-ZTA"/>
+                            <constraint firstItem="3Vk-dG-2Ne" firstAttribute="leading" secondItem="f5l-dc-ppJ" secondAttribute="leading" id="7Up-4y-pYh"/>
+                            <constraint firstAttribute="trailing" secondItem="3Vk-dG-2Ne" secondAttribute="trailing" constant="6" id="7mP-Qn-NDo"/>
+                            <constraint firstItem="gE2-KU-aTA" firstAttribute="centerY" secondItem="f5l-dc-ppJ" secondAttribute="centerY" multiplier="1.6" id="A1I-5L-IpG"/>
+                            <constraint firstItem="gE2-KU-aTA" firstAttribute="centerX" secondItem="f5l-dc-ppJ" secondAttribute="centerX" id="B32-5M-FYJ"/>
+                            <constraint firstItem="c3e-KU-9Un" firstAttribute="leading" secondItem="f5l-dc-ppJ" secondAttribute="leading" id="ZoL-5a-vuC"/>
+                            <constraint firstItem="RAs-e7-ttP" firstAttribute="leading" secondItem="f5l-dc-ppJ" secondAttribute="leading" id="b7Y-nN-AKp"/>
+                            <constraint firstAttribute="trailing" secondItem="gE2-KU-aTA" secondAttribute="trailing" constant="20" id="e71-Ub-Zg9"/>
+                            <constraint firstAttribute="bottom" secondItem="3Vk-dG-2Ne" secondAttribute="bottom" id="fKZ-4Z-Jth"/>
+                            <constraint firstAttribute="bottom" secondItem="RAs-e7-ttP" secondAttribute="bottom" id="hkn-dY-Vgs"/>
+                            <constraint firstItem="c3e-KU-9Un" firstAttribute="top" secondItem="f5l-dc-ppJ" secondAttribute="top" constant="15" id="huC-Yb-VNu"/>
+                            <constraint firstItem="c3e-KU-9Un" firstAttribute="width" secondItem="f5l-dc-ppJ" secondAttribute="width" multiplier="0.28" id="pB4-Ts-3Jq"/>
+                            <constraint firstItem="3Vk-dG-2Ne" firstAttribute="top" secondItem="f5l-dc-ppJ" secondAttribute="top" id="rLm-RE-elc"/>
+                            <constraint firstItem="gE2-KU-aTA" firstAttribute="leading" secondItem="f5l-dc-ppJ" secondAttribute="leading" constant="20" id="u67-3V-iGo"/>
+                            <constraint firstAttribute="trailing" secondItem="RAs-e7-ttP" secondAttribute="trailing" id="ytR-P4-553"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="f5l-dc-ppJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2R1-22-TFL"/>
+                <constraint firstItem="f5l-dc-ppJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EnU-25-MRd"/>
+                <constraint firstAttribute="trailing" secondItem="f5l-dc-ppJ" secondAttribute="trailing" id="OH3-rK-8dK"/>
+                <constraint firstAttribute="bottom" secondItem="f5l-dc-ppJ" secondAttribute="bottom" id="Sj7-qp-hzG"/>
+            </constraints>
+            <connections>
+                <outlet property="baseView" destination="f5l-dc-ppJ" id="trb-nW-9bB"/>
+                <outlet property="pictureIV" destination="3Vk-dG-2Ne" id="Ffy-O7-mzw"/>
+                <outlet property="titleLbl" destination="gE2-KU-aTA" id="oYG-Fz-Pgb"/>
+            </connections>
+            <point key="canvasLocation" x="43.478260869565219" y="8.0357142857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_picture" width="30" height="20"/>
+        <image name="img_default_1_1" width="115" height="115"/>
+    </resources>
+</document>

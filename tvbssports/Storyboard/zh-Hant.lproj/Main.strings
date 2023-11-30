@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "TVBS+"; ObjectID = "Du7-BV-AVQ"; */
+"Du7-BV-AVQ.text" = "TVBS+";
+
+/* Class = "UITabBarItem"; title = "搜尋"; ObjectID = "LPa-sd-7P1"; */
+"LPa-sd-7P1.title" = "搜尋";
+
+/* Class = "UITabBarItem"; title = "收藏"; ObjectID = "frF-xR-gDS"; */
+"frF-xR-gDS.title" = "收藏";
+
+/* Class = "UITabBarItem"; title = "影片"; ObjectID = "sYO-4v-Y33"; */
+"sYO-4v-Y33.title" = "最新";

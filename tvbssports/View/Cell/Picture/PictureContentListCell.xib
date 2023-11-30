@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="353" id="KGk-i7-Jjw" customClass="PictureContentListCell" customModule="videoCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="353"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="353"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnj-ad-ABh">
+                        <rect key="frame" x="0.0" y="5" width="320" height="348"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1e-I0-Qio">
+                                <rect key="frame" x="10" y="10" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="S8N-Q8-l2y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYa-su-3x8">
+                                <rect key="frame" x="10" y="320" width="300" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="VideoTimeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P1e-I0-Qio" secondAttribute="trailing" constant="10" id="1ox-Fa-Src"/>
+                            <constraint firstItem="VYa-su-3x8" firstAttribute="leading" secondItem="dnj-ad-ABh" secondAttribute="leading" constant="10" id="6zU-dp-wbr"/>
+                            <constraint firstAttribute="bottom" secondItem="VYa-su-3x8" secondAttribute="bottom" constant="5" id="DGx-NK-F8l"/>
+                            <constraint firstItem="P1e-I0-Qio" firstAttribute="top" secondItem="dnj-ad-ABh" secondAttribute="top" constant="10" id="DHU-9V-bfY"/>
+                            <constraint firstItem="VYa-su-3x8" firstAttribute="top" secondItem="P1e-I0-Qio" secondAttribute="bottom" constant="10" id="Yp0-As-xGE"/>
+                            <constraint firstItem="P1e-I0-Qio" firstAttribute="leading" secondItem="dnj-ad-ABh" secondAttribute="leading" constant="10" id="cIp-JX-M4F"/>
+                            <constraint firstAttribute="trailing" secondItem="VYa-su-3x8" secondAttribute="trailing" constant="10" id="cek-Ou-jqF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="dnj-ad-ABh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DsH-br-ONq"/>
+                    <constraint firstAttribute="bottom" secondItem="dnj-ad-ABh" secondAttribute="bottom" id="FLp-4G-2AU"/>
+                    <constraint firstAttribute="trailing" secondItem="dnj-ad-ABh" secondAttribute="trailing" id="Fua-YP-hVh"/>
+                    <constraint firstItem="dnj-ad-ABh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XJP-A3-LaP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="baseView" destination="dnj-ad-ABh" id="9vE-BJ-3cr"/>
+                <outlet property="descriptionlabel" destination="VYa-su-3x8" id="ur1-eb-7Eo"/>
+                <outlet property="imageViewHeightConstraint" destination="S8N-Q8-l2y" id="SMh-pM-4Nq"/>
+                <outlet property="pictureImageView" destination="P1e-I0-Qio" id="GmQ-Gg-anf"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="161.04910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="VideoTimeColor">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
