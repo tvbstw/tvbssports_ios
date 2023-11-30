@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>TVBS大家動+Dev</string>
+	<string>TVBS大運動+Dev</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -57,7 +57,7 @@
 	<key>FacebookClientToken</key>
 	<string>1bc352ac5e8ff8308bec9f89e324b5f2</string>
 	<key>FacebookDisplayName</key>
-	<string>TVBS大家動+ Dev</string>
+	<string>TVBS大運動+ Dev</string>
 	<key>FacebookUrlSchemeSuffix</key>
 	<string>tvbsplusdev</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -83,9 +83,9 @@
 		<true/>
 	</dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>授權取用您的相簿權限，才能將TVBS大家動+的照片收藏至相簿中</string>
+	<string>授權取用您的相簿權限，才能將TVBS大運動+的照片收藏至相簿中</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>授權取用您的相簿權限，才能將TVBS大家動+的照片收藏至相簿中</string>
+	<string>授權取用您的相簿權限，才能將TVBS大運動+的照片收藏至相簿中</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
